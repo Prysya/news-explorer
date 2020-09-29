@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Станислав Стаховский" />
+    <meta name="description" content="News Explorer - поисковик новостей" />
+    <link rel="icon" type="image/png" href="<%=require('../../images/favicon/favicon.png')%>" />
+    <title>News Explorer | Статьи</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.articles.css %>" />
+  </head>
+
+  <body class="page">
+    <header class="header header_main">
+      <a href="./index.html" class="header__logo header__logo_light">
+        <img src="<%=require('../../images/logo.svg')%>" alt="News Explorer logo" class="logo header__logo" />
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item header__item_main">
+            <a href="./index.html" class="header__link header__link_color_dark">Главная</a>
+          </li>
+          <li class="header__item header__item_articles header__item_disabled">
+            <a href="./articles" class="header__link header__link_color_dark">Сохраненные статьи</a>
+          </li>
+          <li class="header__item header__item_auth">
+            <button type="button" class="button header__button header__button_color_dark header__button_auth">
+              Авторизоваться
+            </button>
+          </li>
+          <li class="header__item header__item_logged header__item_disabled">
+            <button
+              type="button"
+              class="button header__button header__button_color_dark header__button_logged"
+            ></button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="description">
+        <div class="description__container">
+          <h1 class="description__title">Сохраненные статьи</h1>
+          <p class="description__count">Грета, у вас 5 сохраненный статей</p>
+          <p class="description__keywords">
+            По ключевым словам: <span class="description__keywords-bold">Природа</span>,
+            <span class="description__keywords-bold">Тайга</span> и
+            <span class="description__keywords-bold">2 другим</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="preloader preloader_disabled">
+        <i class="preloader__circle"></i>
+        <h2 class="preloader__title">Идет поиск новостей</h2>
+      </section>
+
+      <section class="not-found not-found_disabled">
+        <img
+          src="<%=require('../../images/not-found.svg')%>"
+          alt="Изображение с недовольной лупой"
+          class="not-found__image"
+        />
+        <h2 class="not-found__title">Ничего не найдено</h2>
+        <p class="not-found__text">
+          К сожалению по вашему запросу ничего не найдено.
+        </p>
+      </section>
+
+      <section class="articles articles_saved">
+        <div class="articles__container">
+          <div class="article-card" id="1">
+            <div class="article-card__container">
+              <p class="article-card__keyword">Природа</p>
+              <button type="button" class="article-card__delete-icon"></button>
+            </div>
+            <a href="./" class="article-card__link" target="_blank">
+              <img src="<%=require('../../images/test-images/image_04.jpg')%>" alt="" class="article-card__image" />
+              <div class="article-card__description-container">
+                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
+                <h6 class="article-card__title">Национальное достояние - парки</h6>
+                <p class="article-card__text">
+                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
+                  национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+                </p>
+                <p class="article-card__source">дзен</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="article-card" id="2">
+            <div class="article-card__container">
+              <p class="article-card__keyword">Природа</p>
+              <button type="button" class="article-card__delete-icon"></button>
+            </div>
+            <a href="./" class="article-card__link" target="_blank">
+              <img src="<%=require('../../images/test-images/image_07.jpg')%>" alt="" class="article-card__image" />
+              <div class="article-card__description-container">
+                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
+                <h6 class="article-card__title">Лесные огоньки: история одной фотографии</h6>
+                <p class="article-card__text">
+                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
+                  ускользающую красоту одного из местных чудес природы.
+                </p>
+                <p class="article-card__source">афиша</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="article-card" id="3">
+            <div class="article-card__container">
+              <p class="article-card__keyword">Тайга</p>
+              <button type="button" class="article-card__delete-icon"></button>
+            </div>
+            <a href="./" class="article-card__link" target="_blank">
+              <img src="<%=require('../../images/test-images/image_08.jpg')%>" alt="" class="article-card__image" />
+              <div class="article-card__description-container">
+                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
+                <h6 class="article-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h6>
+                <p class="article-card__text">
+                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения.
+                  В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+                </p>
+                <p class="article-card__source">афиша</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="article-card" id="4">
+            <div class="article-card__container">
+              <p class="article-card__keyword">Природа</p>
+              <button type="button" class="article-card__delete-icon"></button>
+            </div>
+            <a href="./" class="article-card__link" target="_blank">
+              <img src="<%=require('../../images/test-images/image_04.jpg')%>" alt="" class="article-card__image" />
+              <div class="article-card__description-container">
+                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
+                <h6 class="article-card__title">Национальное достояние - парки</h6>
+                <p class="article-card__text">
+                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
+                  национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+                </p>
+                <p class="article-card__source">дзен</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="article-card" id="5">
+            <div class="article-card__container">
+              <p class="article-card__keyword">Природа</p>
+              <button type="button" class="article-card__delete-icon"></button>
+            </div>
+            <a href="./" class="article-card__link" target="_blank">
+              <img src="<%=require('../../images/test-images/image_07.jpg')%>" alt="" class="article-card__image" />
+              <div class="article-card__description-container">
+                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
+                <h6 class="article-card__title">Лесные огоньки: история одной фотографии</h6>
+                <p class="article-card__text">
+                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
+                  ускользающую красоту одного из местных чудес природы.
+                </p>
+                <p class="article-card__source">афиша</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <button type="button" class="articles__show-more">Показать еще</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">
+        &copy;
+        <time datetime="2020">2020</time> NewsExplorer, Powered by News
+        <abbr class="footer__abbr" title="Application Programming Interface">API</abbr>
+      </p>
+
+      <div class="footer__container">
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="./index.html" class="footer__link" title="Обратно на главную страницу с поиском">Главная</a>
+            </li>
+            <li class="footer__item">
+              <a
+                href="https://praktikum.yandex.ru/"
+                target="_blank"
+                class="footer__link"
+                title="Онлайн платформа образования"
+                >Яндекс.Практикум</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__social">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a
+                href="https://github.com/prysya"
+                target="_blank"
+                class="footer__social-link"
+                title="Github автора этого сайта"
+              >
+                <img
+                  src="<%=require('../../images/github.svg')%>"
+                  alt="Иконка Github"
+                  class="footer__social-icon"
+                  width="21"
+                  height="21"
+                />
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a
+                href="https://www.facebook.com/prysya"
+                target="_blank"
+                class="footer__social-link"
+                title="Facebook автора этого сайта"
+              >
+                <img
+                  src="<%=require('../../images/facebook.svg')%>"
+                  alt="Иконка Facebook"
+                  class="footer__social-icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="<%= htmlWebpackPlugin.files.chunks.articles.entry %>"></script>
+  </body>
+</html>
