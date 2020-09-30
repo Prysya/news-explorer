@@ -1,0 +1,5 @@
+.search__container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
