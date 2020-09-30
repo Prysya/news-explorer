@@ -224,13 +224,18 @@
                 class="footer__social-link"
                 title="Facebook автора этого сайта"
               >
-                <img
-                  src="<%=require('../../images/facebook.svg')%>"
-                  alt="Иконка Facebook"
-                  class="footer__social-icon"
-                  width="20"
-                  height="20"
-                />
+                <picture>
+                  <source media="(max-width: 767px)" srcset="../<%=require('../../images/facebook-square.svg')%>" />
+                  <source media="(max-width: 1279px)" srcset="../<%=require('../../images/facebook-circle.svg')%>" />
+                  <source media="(max-width: 1440px)" srcset="../<%=require('../../images/facebook-square.svg')%>" />
+                  <img
+                    src="../<%=require('../../images/facebook-square.svg')%>"
+                    alt="Facebook"
+                    class="footer__social-icon"
+                    width="20"
+                    height="20"
+                  />
+                </picture>
               </a>
             </li>
           </ul>
