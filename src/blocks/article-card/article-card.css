@@ -1,0 +1,19 @@
+@import url('./__keyword/article-card__keyword.css');
+@import url('./__keyword/_disabled/aricle-card__keyword_disabled.css');
+@import url('./__button-description/article-card__button-description.css');
+@import url('./__button-description/_disabled/article-card__button-description_disabled.css');
+@import url('./__button/article-card__button.css');
+@import url('__button/_bookmark/_hover/article-card__button_bookmark_hover.css');
+@import url('__button/_bookmark/_marked/article-card__button_bookmark_marked.css');
+@import url('__button/_bookmark/_normal/article-card__button_bookmark_normal.css');
+@import url('__container/article-card__container.css');
+
+.article-card {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 576px;
+  overflow: hidden;
+  transition: all .2s linear;
+}

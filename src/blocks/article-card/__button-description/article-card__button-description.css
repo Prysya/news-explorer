@@ -1,0 +1,9 @@
+.article-card__button-description {
+  box-sizing: border-box;
+  padding: 8px 12px;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin: 0 0 0 5px;
+}
