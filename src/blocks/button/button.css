@@ -1,0 +1,14 @@
+.button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+}
+
+.button:hover {
+  background: #347EFF;
+}
+
+.button:active {
+  background: #2A65CC;
+}
