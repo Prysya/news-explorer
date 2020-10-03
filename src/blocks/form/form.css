@@ -1,7 +1,7 @@
 @import url('./__input/form__input.css');
 @import url('./__button/form__button.css');
+@import url('./__fieldset/form__fieldset.css');
 
 .form {
   display: flex;
-  justify-content: center;
 }

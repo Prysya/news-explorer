@@ -1,5 +1,9 @@
 .form__input {
   font-size: 16px;
   line-height: 22px;
+  outline: none
+}
+
+.form__input::placeholder {
   color: #B6BCBF;
 }
