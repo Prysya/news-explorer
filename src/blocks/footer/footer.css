@@ -15,3 +15,9 @@
   box-sizing: border-box;
   padding: 28px 0 23px;
 }
+
+@media screen and (max-width: 1254px) {
+  .footer {
+    padding-bottom: 17px;
+  }
+}

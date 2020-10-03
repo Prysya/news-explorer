@@ -4,3 +4,9 @@
 .footer__item:last-of-type {
   margin-right: 0;
 }
+
+@media screen and (max-width: 1254px) {
+  .footer__item {
+    margin-right: 18px;
+  }
+}

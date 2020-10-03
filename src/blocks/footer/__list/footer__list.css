@@ -5,3 +5,9 @@
   padding: 0;
   margin: 0 59px 0 0;
 }
+
+@media screen and (max-width: 1254px) {
+  .footer__list {
+    margin-right: 34px;
+  }
+}
