@@ -4,11 +4,12 @@
 @import url('./__input/search__input.css');
 @import url('./__button/search__button.css');
 @import url('./__container/search__container.css');
+@import url('./__form/search__form.css');
 
 .search {
   background-image: url("../../images/background.jpg");
   background-size: cover;
   box-sizing: border-box;
-  padding: 80px 0;
-  color: white;
+  padding: 118px 0 77px;
+  color: #fff;
 }

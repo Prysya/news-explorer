@@ -4,6 +4,7 @@
   box-sizing: border-box;
   backdrop-filter: blur(8px);
   border-radius: 100px;
-  padding: 21px 0;
+  padding: 20px 21px;
   width: 100%;
+  box-shadow: 0 5px 15px rgba(14,26,57,.2);
 }

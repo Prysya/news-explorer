@@ -1,7 +1,8 @@
 .search__button {
-  padding: 22px 53px;
+  padding: 20px 52px;
   position: absolute;
   right: 0;
   bottom: 0;
   top: 0;
+  cursor: pointer;
 }
