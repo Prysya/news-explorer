@@ -11,3 +11,10 @@
   font-weight: 500;
   font-size: 18px;
 }
+
+@media screen and (max-width: 894px) {
+  .articles__show-more {
+    padding: 18px 52px;
+    margin: 32px auto 0;
+  }
+}

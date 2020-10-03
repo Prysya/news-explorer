@@ -1,6 +1,20 @@
 .articles__container {
   display: grid;
-  grid-template-columns: repeat(3,400px);
+  grid-template-columns: repeat(3, 400px);
   grid-gap: 16px 16px;
   justify-content: center;
+}
+
+@media screen and (max-width: 1254px) {
+  .articles__container {
+    grid-template-columns: repeat(3, 280px);
+    grid-gap: 12px 12px;
+  }
+}
+
+@media screen and (max-width: 894px) {
+  .articles__container {
+    grid-template-columns: repeat(3, 224px);
+    grid-gap: 8px 8px;
+  }
 }

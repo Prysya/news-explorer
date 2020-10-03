@@ -9,3 +9,16 @@
   box-sizing: border-box;
   padding: 80px;
 }
+
+@media screen and (max-width: 1254px) {
+  .articles {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 894px) {
+  .articles {
+    padding: 16px 40px 40px;
+  }
+}
+
