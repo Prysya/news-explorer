@@ -8,3 +8,9 @@
   width: 100%;
   box-shadow: 0 5px 15px rgba(14,26,57,.2);
 }
+
+@media screen and (max-width: 894px){
+  .search__input {
+    padding: 16px 21px;
+  }
+}

@@ -5,3 +5,12 @@
   max-width: 606px;
   margin-bottom: 32px;
 }
+
+@media screen and (max-width: 894px){
+  .search__title {
+    font-size: 36px;
+    line-height: 40px;
+    max-width: 400px;
+    margin-bottom: 16px;
+  }
+}

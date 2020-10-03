@@ -13,3 +13,9 @@
   padding: 118px 0 77px;
   color: #fff;
 }
+
+@media screen and (max-width: 894px){
+  .search {
+    padding: 76px 0 19px;
+  }
+}
