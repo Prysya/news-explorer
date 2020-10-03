@@ -4,3 +4,10 @@
   font-size: 40px;
   margin: 0 0 24px 0;
 }
+
+@media screen and (max-width: 1254px) {
+  .author__title {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+}

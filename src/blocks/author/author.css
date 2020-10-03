@@ -9,3 +9,9 @@
   box-sizing: border-box;
   padding: 80px 0;
 }
+
+@media screen and (max-width: 1254px) {
+  .author {
+    padding: 44px 0;
+  }
+}

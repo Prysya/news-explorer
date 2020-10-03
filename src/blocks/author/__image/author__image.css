@@ -2,3 +2,9 @@
   border-radius: 100%;
   margin: 0 56px 0 0;
 }
+
+@media screen and (max-width: 1254px) {
+  .author__image {
+    margin: 17px 31px 0 0;
+  }
+}
