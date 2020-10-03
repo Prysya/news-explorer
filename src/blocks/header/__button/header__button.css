@@ -3,5 +3,7 @@
   box-sizing: border-box;
   border-radius: 100px;
   background: none;
-  padding: 15px 22px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
 }

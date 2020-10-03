@@ -1,0 +1,13 @@
+.header__button_logged {
+  padding: 12px 20px;
+}
+
+.header__button_logged:after {
+  position: relative;
+  top: 2px;
+  left: 1px;
+  transition: left .2s linear;
+  content: url("../../../../images/logout.svg");
+  height: 18px;
+  width: 16px;
+}
