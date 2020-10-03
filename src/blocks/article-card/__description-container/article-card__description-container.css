@@ -1,0 +1,8 @@
+.article-card__description-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 304px;
+  background-color: #fff;
+  padding: 22px 24px 24px;
+}
