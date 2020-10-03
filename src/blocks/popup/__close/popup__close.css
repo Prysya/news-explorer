@@ -1,0 +1,7 @@
+.popup__close {
+  width: 24px;
+  position: absolute;
+  top: -38px;
+  right: -38px;
+  cursor: pointer;
+}
