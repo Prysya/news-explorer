@@ -8,3 +8,8 @@
   margin: 4px 0 12px;
   height: 13px;
 }
+
+@media screen and (max-width: 894px){
+  .error {
+    margin-bottom: 10px;  }
+}
