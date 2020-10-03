@@ -11,3 +11,8 @@
   background-color: #E6E8EB;
   color: rgba(0, 0, 0, .2);
 }
+
+@media screen and (max-width: 894px){
+  .popup__button {
+    margin-bottom: 13px;  }
+}
