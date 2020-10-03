@@ -27,14 +27,14 @@
 }
 
 @font-face {
-  font-family: 'Roboto-Slab';
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 400;
   src: url('./fonts/robotoslab-regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Sans-Pro';
+  font-family: 'Sans Pro';
   font-style: normal;
   font-weight: 400;
   src: url('./fonts/sourcesanspro-regular.woff') format('woff');
