@@ -1,0 +1,6 @@
+.footer__social-item {
+  margin-right: 27px;
+}
+.footer__social-item:last-child {
+  margin-right: 0;
+}
