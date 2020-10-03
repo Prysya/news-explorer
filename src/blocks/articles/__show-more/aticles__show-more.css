@@ -1,0 +1,13 @@
+.articles__show-more {
+  border-radius: 80px;
+  box-sizing: border-box;
+  padding: 22px 84px;
+  border: none;
+  margin: 64px auto 0;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  background-color: #FFF;
+  font-weight: 500;
+  font-size: 18px;
+}
