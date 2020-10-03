@@ -1,8 +1,10 @@
 @import url('./__search/page__search.css');
 
 .page {
-  max-width: 1440px;
   min-width: 320px;
   font-family: "Roboto", "Arial", sans-serif;
   text-rendering: optimizeLegibility;
+  color: #1A1B22;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
