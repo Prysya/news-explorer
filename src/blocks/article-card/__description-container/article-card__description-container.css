@@ -6,3 +6,10 @@
   background-color: #fff;
   padding: 22px 24px 24px;
 }
+
+@media screen and (max-width: 1254px) {
+  .article-card__description-container {
+    padding: 17px 16px 16px;
+    height: 269px;
+  }
+}

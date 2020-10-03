@@ -8,3 +8,9 @@
   justify-content: flex-end;
   padding: 24px;
 }
+
+@media screen and (max-width: 1254px) {
+  .article-card__container {
+    padding: 8px;
+  }
+}

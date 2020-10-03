@@ -10,8 +10,8 @@
   overflow: hidden;
 }
 
-@media (max-width: 767px) {
-  .article__text {
+@media (max-width: 1254px) {
+  .article-card__text {
     -webkit-line-clamp: 4;
   }
 }

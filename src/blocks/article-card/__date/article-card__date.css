@@ -1,6 +1,12 @@
 .article-card__date {
-  font-family: "Sans Pro", "Arial", sans-serif;
+  font-family: 'Sans Pro', 'Arial', sans-serif;
   font-size: 18px;
-  color: #B6BCBF;
+  color: #b6bcbf;
   margin-bottom: 14px;
+}
+
+@media (max-width: 1254px) {
+  .article-card__date {
+    margin-bottom: 15px;
+  }
 }
