@@ -11,3 +11,9 @@
     margin-bottom: 12px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .author__title {
+    margin-bottom: 18px;
+  }
+}
