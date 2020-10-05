@@ -8,6 +8,6 @@
 @media screen and (max-width: 894px) {
   .articles__title {
     font-size: 30px;
-    margin: 0 0 31px 0;
+    margin-bottom: 31px;
   }
 }

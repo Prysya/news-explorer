@@ -12,9 +12,20 @@
   font-size: 18px;
 }
 
+.articles__show-more:hover {
+  opacity: .7;
+}
+
 @media screen and (max-width: 894px) {
   .articles__show-more {
     padding: 18px 52px;
     margin: 32px auto 0;
+  }
+}
+
+@media screen and (max-width: 894px) {
+  .articles__show-more {
+    margin-top: 19px;
+    width: calc(100% - 32px);
   }
 }
