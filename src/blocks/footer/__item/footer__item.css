@@ -10,3 +10,25 @@
     margin-right: 18px;
   }
 }
+
+@media screen and (max-width: 670px) {
+  .footer__item {
+    margin-bottom: 16px;
+  }
+
+  .footer__item:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__item {
+    margin-bottom: 28px;
+    margin-right: 0;
+  }
+
+  .footer__item:last-of-type {
+    margin-bottom: 0;
+  }
+}
+

@@ -11,3 +11,17 @@
     margin-right: 34px;
   }
 }
+
+@media screen and (max-width: 670px) {
+  .footer__list {
+    flex-direction: column;
+    margin-bottom: 38px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__list {
+    margin-bottom: 44px;
+  }
+}
+

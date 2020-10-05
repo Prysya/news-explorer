@@ -21,3 +21,15 @@
     padding-bottom: 17px;
   }
 }
+
+@media screen and (max-width: 670px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    padding: 47px 0 32px;
+  }
+}
