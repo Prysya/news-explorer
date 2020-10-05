@@ -7,8 +7,15 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 894px){
+@media screen and (max-width: 894px) {
   .search__button {
     padding: 14px 44px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search__button {
+    position: inherit;
+    padding: 16px 44px;
   }
 }

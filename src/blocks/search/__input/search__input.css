@@ -1,16 +1,23 @@
 .search__input {
-  background: #FFFFFF;
-  border: 1px solid #D1D2D6;
+  background: #ffffff;
+  border: 1px solid #d1d2d6;
   box-sizing: border-box;
   backdrop-filter: blur(8px);
   border-radius: 100px;
   padding: 20px 21px;
-  width: 100%;
-  box-shadow: 0 5px 15px rgba(14,26,57,.2);
+  width: 99%;
+  box-shadow: 0 5px 15px rgba(14, 26, 57, 0.2);
 }
 
-@media screen and (max-width: 894px){
+@media screen and (max-width: 894px) {
   .search__input {
     padding: 16px 21px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search__input {
+    margin-bottom: 16px;
+    padding: 16px 15px;
   }
 }

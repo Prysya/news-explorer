@@ -10,12 +10,18 @@
   background-image: url("../../images/background.jpg");
   background-size: cover;
   box-sizing: border-box;
-  padding: 118px 0 77px;
+  padding: 118px 0 79px;
   color: #fff;
 }
 
 @media screen and (max-width: 894px){
   .search {
     padding: 76px 0 19px;
+  }
+}
+
+@media screen and (max-width: 894px){
+  .search {
+    padding-bottom: 5px;
   }
 }

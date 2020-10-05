@@ -3,3 +3,9 @@
   box-sizing: border-box;
   padding-top: 42px;
 }
+
+@media screen and (max-width: 500px) {
+  .search__form {
+    padding-top: 37px;
+  }
+}
