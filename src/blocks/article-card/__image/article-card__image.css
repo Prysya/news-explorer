@@ -14,3 +14,9 @@
     height: 151px;
   }
 }
+
+@media (max-width: 500px) {
+  .article-card__image {
+    height: 188px;
+  }
+}

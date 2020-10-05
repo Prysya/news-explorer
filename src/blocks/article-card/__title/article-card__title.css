@@ -14,3 +14,9 @@
     margin-bottom: 9px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .article-card__title {
+    margin-bottom: 12px;
+  }
+}
