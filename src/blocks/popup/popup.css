@@ -9,6 +9,9 @@
 @import url('./__image/popup__image.css');
 @import url('./__image-container/popup__image-container.css');
 @import url('./_type/_image/popup_type_image.css');
+@import url('./_type/_login/popup_type_login.css');
+@import url('./_type/_reg/popup_type_reg.css');
+@import url('./_type/_success/popup_type_success.css');
 @import url('./__label/popup__label.css');
 @import url('./__fieldset/popup__fieldset.css');
 @import url('./__sub-text/popup__sub-text.css');

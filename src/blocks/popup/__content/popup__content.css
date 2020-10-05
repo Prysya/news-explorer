@@ -8,8 +8,13 @@
   padding: 34px 36px 28px;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 500px) {
   .popup__content {
-    width: calc(100% - 60px);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-height: calc(100% - 56px);
+    padding: 17px;
   }
 }
