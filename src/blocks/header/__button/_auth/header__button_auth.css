@@ -1,10 +1,18 @@
 .header__button_auth {
-  padding: 12px 33px;
+  padding: 12px 17px;
 }
 
 @media screen and (max-width: 894px){
   .header__button_auth {
-    padding: 11px 26px;
+    padding: 11px 13px;
     font-size: 16px;
   }
 }
+
+@media screen and (max-width: 500px){
+  .header__button_auth {
+    padding: 16px 13px;
+    font-size: 18px;
+  }
+}
+
