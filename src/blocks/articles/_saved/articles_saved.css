@@ -1,3 +1,15 @@
 .articles_saved {
-  padding-top: 62px;
+  padding: 62px 0;
+}
+
+@media screen and (max-width: 894px) {
+  .articles_saved {
+    padding: 62px 0 38px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .articles_saved {
+    padding: 49px 0 12px;
+  }
 }

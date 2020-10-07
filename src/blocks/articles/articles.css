@@ -1,4 +1,5 @@
 @import url('./__container/articles__container.css');
+@import url('./__container/_gap/_small/articles__container_gap_small.css');
 @import url('./__title/articles__title.css');
 @import url('./__show-more/aticles__show-more.css');
 @import url('./__show-more/_disabled/articles__show-more_disabled.css');
@@ -19,12 +20,6 @@
 }
 
 @media screen and (max-width: 894px) {
-  .articles {
-    padding: 43px 0 40px;
-  }
-}
-
-@media screen and (max-width: 730px) {
   .articles {
     padding: 43px 0 40px;
   }

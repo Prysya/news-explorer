@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (max-width: 894px) {
+@media screen and (max-width: 500px) {
   .articles__show-more {
     margin-top: 19px;
     width: calc(100% - 32px);
