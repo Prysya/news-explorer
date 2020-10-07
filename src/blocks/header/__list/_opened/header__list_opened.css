@@ -1,0 +1,5 @@
+.header__list_opened {
+  visibility: visible;
+  top: 56px;
+  position: absolute;
+}
