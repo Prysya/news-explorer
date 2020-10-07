@@ -1,0 +1,5 @@
+@media screen and (max-width: 500px) {
+  .articles__container_gap_small {
+    grid-gap: 9px;
+  }
+}
