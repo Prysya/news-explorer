@@ -25,7 +25,7 @@
             <li class="header__item header__item_main">
               <a href="./" class="link header__link header__link_color_light header__link_active-light">Главная</a>
             </li>
-            <li class="header__item header__item_articles header__item_disabled">
+            <li class="header__item header__item_articles">
               <a href="./articles" class="link header__link header__link_color_light">Сохраненные статьи</a>
             </li>
             <li class="header__item header__item_auth">
@@ -78,14 +78,14 @@
 
       <!--      Для открытия блока preloader необходимо удалить класс preloader_disabled-->
       <!--      для скрытия добавить класс preloader_disabled-->
-      <section class="preloader preloader_disabled">
+      <section class="preloader">
         <i class="preloader__circle"></i>
         <h2 class="preloader__title">Идет поиск новостей...</h2>
       </section>
 
       <!--      Для открытия блока preloader необходимо удалить класс not-found_disabled-->
       <!--      для скрытия добавить класс not-found_disabled-->
-      <section class="not-found not-found_disabled">
+      <section class="not-found">
         <img
           src="<%=require('../../images/not-found.svg')%>"
           alt="Изображение с недовольной лупой"
@@ -99,7 +99,7 @@
 
       <!--      Для открытия блока preloader необходимо удалить класс request-error_disabled-->
       <!--      для скрытия добавить класс request-error_disabled-->
-      <section class="request-error request-error_disabled">
+      <section class="request-error">
         <img
           src="<%=require('../../images/request-error.svg')%>"
           alt="Изображение с грустным монитором"
@@ -113,7 +113,7 @@
 
       <!--      Для открытия блока articles необходимо удалить класс articles_disabled-->
       <!--      для скрытия добавить класс articles_disabled-->
-      <section class="articles articles_main articles_disabled">
+      <section class="articles articles_main">
         <h2 class="articles__title wrapper">Результаты поиска</h2>
         <div class="articles__container wrapper">
           <div class="article-card" id="1">
