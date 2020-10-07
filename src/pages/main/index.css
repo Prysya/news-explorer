@@ -4,13 +4,13 @@
 @import url('../../blocks/error/error.css');
 @import url('../../blocks/error/_align/_center/error_align_center.css');
 @import url('../../blocks/page/page.css');
+@import url('../../blocks/button/button.css');
 @import url('../../blocks/header/header.css');
 @import url('../../blocks/header/__button/_auth/header__button_auth.css');
 @import url('../../blocks/header/__button/_logged/header__button_logged.css');
 @import url('../../blocks/link/link.css');
 @import url('../../blocks/logo/logo.css');
 @import url('../../blocks/search/search.css');
-@import url('../../blocks/button/button.css');
 @import url('../../blocks/form/form.css');
 @import url('../../blocks/section/section.css');
 @import url('../../blocks/preloader/preloader.css');
