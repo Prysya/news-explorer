@@ -9,10 +9,9 @@
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 580px){
   .header__button_auth {
     padding: 16px 13px;
-    font-size: 18px;
   }
 }
 
