@@ -1,3 +1,8 @@
 .link {
   text-decoration: none;
+  transition: opacity .2s linear;
+}
+
+.link:hover, .link:focus {
+  opacity: .6;
 }

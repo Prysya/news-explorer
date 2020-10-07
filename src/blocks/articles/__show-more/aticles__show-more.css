@@ -14,7 +14,10 @@
 
 .articles__show-more:hover {
   opacity: .7;
+  box-shadow: 0 5px 5px rgba(6, 17, 43, 0.1);
 }
+
+
 
 @media screen and (max-width: 894px) {
   .articles__show-more {
