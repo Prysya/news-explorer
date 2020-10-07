@@ -1,6 +1,6 @@
 .article-card__keyword {
   box-sizing: border-box;
-  padding: 8px 12px;
+  padding: 12px 13px;
   font-weight: 500;
   font-size: 14px;
   background-color: #FFFFFF;
@@ -10,4 +10,5 @@
   white-space: nowrap;
   max-width: 110px;
   margin: 0 auto 0 0;
+  align-self: center;
 }

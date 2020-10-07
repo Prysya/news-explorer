@@ -11,12 +11,12 @@
 
 @media (max-width: 1254px) {
   .article-card__image {
-    height: 151px;
+    height: 150px;
   }
 }
 
 @media (max-width: 500px) {
   .article-card__image {
-    height: 188px;
+    height: 197px;
   }
 }

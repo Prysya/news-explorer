@@ -3,16 +3,17 @@
 @import url('./__button-description/article-card__button-description.css');
 @import url('./__button-description/_disabled/article-card__button-description_disabled.css');
 @import url('./__button/article-card__button.css');
-@import url('__button/_bookmark/article-card_bookmark.css');
-@import url('__button/_bookmark/_marked/article-card__button_bookmark_marked.css');
-@import url('__container/article-card__container.css');
-@import url('__link/article-card__link.css');
-@import url('__date/article-card__date.css');
-@import url('__description-container/article-card__description-container.css');
-@import url('__title/article-card__title.css');
-@import url('__text/article-card__text.css');
-@import url('__source/article-card__source.css');
-@import url('__image/article-card__image.css');
+@import url('./__button/_bookmark/article-card_bookmark.css');
+@import url('./__button/_bookmark/_marked/article-card__button_bookmark_marked.css');
+@import url('./__button/_trash/article-card_trash.css');
+@import url('./__container/article-card__container.css');
+@import url('./__link/article-card__link.css');
+@import url('./__date/article-card__date.css');
+@import url('./__description-container/article-card__description-container.css');
+@import url('./__title/article-card__title.css');
+@import url('./__text/article-card__text.css');
+@import url('./__source/article-card__source.css');
+@import url('./__image/article-card__image.css');
 
 .article-card {
   box-sizing: border-box;

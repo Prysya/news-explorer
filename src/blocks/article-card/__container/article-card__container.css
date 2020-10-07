@@ -17,6 +17,6 @@
 
 @media screen and (max-width: 500px) {
   .article-card__container {
-    padding: 8px 16px;
+    padding: 16px;
   }
 }
