@@ -1,0 +1,21 @@
+@import url('./__count/description__count.css');
+@import url('./__keywords/description__keywords.css');
+@import url('./__keywords-bold/description__keywords-bold.css');
+@import url('./__title/description__title.css');
+
+.description {
+  box-sizing: border-box;
+  padding: 42px 0 58px;
+}
+
+@media screen and (max-width: 894px) {
+  .description {
+    padding: 29px 0 6px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .description {
+    padding: 16px 0 6px;
+  }
+}
