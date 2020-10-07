@@ -1,0 +1,7 @@
+.article-card__button_trash {
+  background-image: url("../../../../images/trash_normal.svg");
+}
+
+.article-card__button_trash:hover {
+  background-image: url("../../../../images/trash_hover.svg");
+}
