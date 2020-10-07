@@ -12,11 +12,6 @@
   font-weight: 500;
   cursor: pointer;
   outline: none;
-  transition: opacity .2s linear;
-}
-
-.header__button:focus, .header__button:hover {
-  opacity: .6;
 }
 
 @media screen and (max-width: 580px){

@@ -11,6 +11,11 @@
   width: 16px;
 }
 
+.header__button_logged:hover:after, .header__button_logged:focus:after {
+  left: 3px;
+  opacity: 1;
+}
+
 @media screen and (max-width: 894px) {
   .header__button_logged {
     padding: 10px 15px;
