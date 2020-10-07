@@ -8,4 +8,11 @@
   text-decoration: none;
   color: #FFF;
   transition: color .2s linear;
+  z-index: 12;
+}
+
+@media screen and (max-width: 500px) {
+  .header__logo {
+    font-size: 16px;
+  }
 }
