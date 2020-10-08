@@ -6,38 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="author" content="Станислав Стаховский" />
     <meta name="description" content="News Explorer - поисковик новостей" />
-    <link rel="icon" type="image/png" href="./images/favicon.png" />
-    <title>News Explorer | Главная</title>
-    <link rel="stylesheet" href="main/main.7b79b43ade3a9912402e.css" />
+    <link rel="icon" type="image/png" href=".././images/favicon.png" />
+    <title>News Explorer | Статьи</title>
+    <link rel="stylesheet" href="js/articles.df52dc51ed086ddf2484.css" />
   </head>
 
   <body class="page">
-    <header class="header header_main">
+    <header class="header header_articles">
       <div class="header__container wrapper">
-        <a href="./" class="link header__logo header__logo_light">NewsExplorer</a>
+        <a href="../" class="link header__logo header__logo_dark">NewsExplorer</a>
 
-        <button class="header__dropdown-btn header__dropdown-btn_light_closed"></button>
+        <button class="header__dropdown-btn header__dropdown-btn_dark_closed"></button>
         <!--        Для скрытия кнопок к тегу li необходимо добавить класс header__item_disabled-->
         <!--        для открытия, удалить класс header__item_disabled-->
         <nav class="header__nav">
           <div class="header__dropdown-container popup"></div>
-          <ul class="header__list header__list_dark">
+          <ul class="header__list header__list_light">
             <li class="header__item header__item_main">
-              <a href="./" class="link header__link header__link_color_light header__link_active-light" tabindex="1">Главная</a>
+              <a href="../" class="link header__link header__link_color_dark">Главная</a>
             </li>
             <li class="header__item header__item_articles">
-              <a href="./articles" class="link header__link header__link_color_light" tabindex="2">Сохраненные статьи</a>
+              <a href="./" class="link header__link header__link_color_dark header__link_active-dark"
+                >Сохраненные статьи</a
+              >
             </li>
-            <li class="header__item header__item_auth">
-              <button type="button" class="header__button header__button_color_light header__button_auth">
+            <li class="header__item header__item_auth header__item_disabled">
+              <button type="button" class="header__button header__button_color_dark header__button_auth">
                 Авторизоваться
               </button>
             </li>
-            <li class="header__item header__item_logged header__item_disabled">
+            <li class="header__item header__item_logged">
               <button
                 type="button"
-                class="header__button header__button_color_light header__button_logged header__button_logged_light"
-              ></button>
+                class="header__button header__button_color_dark header__button_logged header__button_logged_dark"
+              >
+                Грета
+              </button>
             </li>
           </ul>
         </nav>
@@ -45,49 +49,26 @@
     </header>
 
     <main class="main">
-      <section class="search page__search">
-        <form class="form search__form wrapper" name="search" novalidate>
-          <fieldset class="form__fieldset search__fieldset">
-            <legend class="form__legend search__title">
-              Что творится в мире?
-            </legend>
-
-            <label for="search-input" class="form__label search__label"
-              >Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</label
-            >
-
-            <div class="search__container">
-              <input
-                type="text"
-                name="search"
-                class="form__input search__input"
-                id="search-input"
-                minlength="2"
-                maxlength="30"
-                placeholder="Введите тему новости"
-                required
-              />
-              <button class="button form__button search__button" type="submit" disabled>
-                Искать
-              </button>
-            </div>
-            <p class="error error_search" id="search-error"></p>
-          </fieldset>
-        </form>
+      <section class="description">
+        <div class="description__container wrapper">
+          <h1 class="description__title">Сохраненные статьи</h1>
+          <p class="description__count">Грета, у вас 5 сохранённых статей</p>
+          <p class="description__keywords">
+            По ключевым словам: <span class="description__keywords-bold">Природа</span>,
+            <span class="description__keywords-bold">Тайга</span> и
+            <span class="description__keywords-bold">2-м другим</span>
+          </p>
+        </div>
       </section>
 
-      <!--      Для открытия блока preloader необходимо удалить класс preloader_disabled-->
-      <!--      для скрытия добавить класс preloader_disabled-->
-      <section class="preloader">
+      <section class="preloader preloader_disabled">
         <i class="preloader__circle"></i>
-        <h2 class="preloader__title">Идет поиск новостей...</h2>
+        <h2 class="preloader__title">Идет поиск новостей</h2>
       </section>
 
-      <!--      Для открытия блока preloader необходимо удалить класс not-found_disabled-->
-      <!--      для скрытия добавить класс not-found_disabled-->
-      <section class="not-found">
+      <section class="not-found not-found_disabled">
         <img
-          src="./images/not-found.svg"
+          src=".././images/not-found.svg"
           alt="Изображение с недовольной лупой"
           class="not-found__image"
         />
@@ -97,11 +78,9 @@
         </p>
       </section>
 
-      <!--      Для открытия блока preloader необходимо удалить класс request-error_disabled-->
-      <!--      для скрытия добавить класс request-error_disabled-->
-      <section class="request-error">
+      <section class="request-error request-error_disabled">
         <img
-          src="./images/request-error.svg"
+          src=".././images/request-error.svg"
           alt="Изображение с грустным монитором"
           class="request-error__image"
         />
@@ -111,21 +90,18 @@
         </p>
       </section>
 
-      <!--      Для открытия блока articles необходимо удалить класс articles_disabled-->
-      <!--      для скрытия добавить класс articles_disabled-->
-      <section class="articles articles_main">
-        <h2 class="articles__title wrapper">Результаты поиска</h2>
-        <div class="articles__container wrapper">
+      <section class="articles articles_saved">
+        <div class="articles__container articles__container_gap_small wrapper">
           <div class="article-card" id="1">
             <div class="article-card__container">
-              <p class="article-card__keyword article-card__keyword_disabled">Природа</p>
+              <p class="article-card__keyword">Природа</p>
               <p class="article-card__button-description article-card__button-description_disabled">
                 Войдите, чтобы сохранять статьи
               </p>
-              <button type="button" class="article-card__button article-card__button_bookmark"></button>
+              <button type="button" class="article-card__button article-card__button_trash"></button>
             </div>
-            <a href="./" class="article-card__link" target="_blank">
-              <img src="./images/image_04.jpg" alt="" class="article-card__image" />
+            <a href="https://yandex.ru" class="article-card__link" target="_blank">
+              <img src=".././images/image_04.jpg" alt="" class="article-card__image" />
               <div class="article-card__description-container">
                 <time class="article-card__date" datetime="2012-12-23">2 августа, 2019</time>
                 <h3 class="article-card__title">Национальное достояние &#8211; парки</h3>
@@ -140,14 +116,14 @@
 
           <div class="article-card" id="2">
             <div class="article-card__container">
-              <p class="article-card__keyword article-card__keyword_disabled">Природа</p>
+              <p class="article-card__keyword">Природа</p>
               <p class="article-card__button-description article-card__button-description_disabled">
-                Войдите, чтобы сохранять статьи
+                Убрать из сохранённых
               </p>
-              <button type="button" class="article-card__button article-card__button_bookmark"></button>
+              <button type="button" class="article-card__button article-card__button_trash"></button>
             </div>
-            <a href="./" class="article-card__link" target="_blank">
-              <img src="./images/image_04.jpg" alt="" class="article-card__image" />
+            <a href="https://yandex.ru" class="article-card__link" target="_blank">
+              <img src=".././images/image_04.jpg" alt="" class="article-card__image" />
               <div class="article-card__description-container">
                 <time class="article-card__date" datetime="2012-12-23">2 августа, 2019</time>
                 <h3 class="article-card__title">Национальное достояние - парки</h3>
@@ -162,14 +138,58 @@
 
           <div class="article-card" id="3">
             <div class="article-card__container">
-              <p class="article-card__keyword article-card__keyword_disabled">Природа</p>
+              <p class="article-card__keyword">Тайга</p>
               <p class="article-card__button-description article-card__button-description_disabled">
-                Войдите, чтобы сохранять статьи
+                Убрать из сохранённых
               </p>
-              <button type="button" class="article-card__button article-card__button_bookmark"></button>
+              <button type="button" class="article-card__button article-card__button_trash"></button>
             </div>
-            <a href="./" class="article-card__link" target="_blank">
-              <img src="./images/image_07.jpg" alt="" class="article-card__image" />
+            <a href="https://yandex.ru" class="article-card__link" target="_blank">
+              <img src=".././images/image_07.jpg" alt="" class="article-card__image" />
+              <div class="article-card__description-container">
+                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
+                <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
+                <p class="article-card__text">
+                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
+                  ускользающую красоту одного из местных чудес природы.
+                </p>
+                <p class="article-card__source">медуза</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="article-card" id="4">
+            <div class="article-card__container">
+              <p class="article-card__keyword">Тайга</p>
+              <p class="article-card__button-description article-card__button-description_disabled">
+                Убрать из сохраненных
+              </p>
+              <button type="button" class="article-card__button article-card__button_trash"></button>
+            </div>
+            <a href="https://yandex.ru" class="article-card__link" target="_blank">
+              <img src=".././images/image_07.jpg" alt="" class="article-card__image" />
+              <div class="article-card__description-container">
+                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
+                <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
+                <p class="article-card__text">
+                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
+                  ускользающую красоту одного из местных чудес природы.
+                </p>
+                <p class="article-card__source">медуза</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="article-card" id="5">
+            <div class="article-card__container">
+              <p class="article-card__keyword">Тайга</p>
+              <p class="article-card__button-description article-card__button-description_disabled">
+                Убрать из сохраненных
+              </p>
+              <button type="button" class="article-card__button article-card__button_trash"></button>
+            </div>
+            <a href="https://yandex.ru" class="article-card__link" target="_blank">
+              <img src=".././images/image_07.jpg" alt="" class="article-card__image" />
               <div class="article-card__description-container">
                 <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
                 <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
@@ -182,148 +202,11 @@
             </a>
           </div>
         </div>
-        <button type="button" class="articles__show-more">Показать еще</button>
-      </section>
-
-      <section class="author wrapper">
-        <picture>
-          <source media="(max-width: 670px)" srcset="./images/author-mobile.jpg" />
-          <source media="(max-width: 1254px)" srcset="./images/author-tablet.jpg" />
-          <source media="(max-width: 1440px)" srcset="./images/author.jpg" />
-          <img
-            src="./images/author.jpg"
-            alt="Фотография создателя сайта"
-            class="author__image"
-            title="Фотография создателя сайта"
-        /></picture>
-
-        <div class="author__container">
-          <h3 class="author__title">Об авторе</h3>
-          <p class="author__text">
-            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими
-            технологиями разработки владеете.
-          </p>
-          <p class="author__text">
-            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
-            потенциальным заказчикам.
-          </p>
-        </div>
-      </section>
-
-      <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
-      <section class="popup popup_type_login">
-        <div class="popup__content">
-          <img src="./images/close.svg" alt="" class="popup__close close close__edit" />
-          <form class="form form_login popup__form" name="login" id="login" novalidate="">
-            <fieldset class="form__fieldset popup__fieldset" name="fieldset">
-              <legend class="form__title popup__title">Вход</legend>
-              <label for="login-email" class="form__label popup__label">Email</label>
-              <input
-                type="email"
-                name="loginEmail"
-                id="login-email"
-                class="form__input form__input_type_email popup__input"
-                placeholder="Введите почту"
-                pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                required=""
-              />
-              <p class="error error_type_email" id="loginEmail"></p>
-              <label for="login-password" class="form__label popup__label">Пароль</label>
-              <input
-                type="password"
-                name="loginPassword"
-                id="login-password"
-                class="form__input form__input_type_password popup__input"
-                placeholder="Введите пароль"
-                minlength="8"
-                required=""
-              />
-              <p class="error error_type_password" id="loginPassword"></p>
-              <p class="error error_type_login error_align_center" id="error-login"></p>
-              <!--              Для того чтобы активировать кнопку нужно снять атрибут disabled-->
-              <button type="submit" class="button form__button popup__button" disabled="">
-                Войти
-              </button>
-              <p class="form__sub-text popup__sub-text">
-                или
-                <button type="button" class="form__sub-link popup__sub-link popup__sub-link_register">
-                  Зарегистрироваться
-                </button>
-              </p>
-            </fieldset>
-          </form>
-        </div>
-      </section>
-
-      <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
-      <section class="popup popup_type_reg">
-        <div class="popup__content">
-          <img src="./images/close.svg" alt="" class="popup__close close close__edit" />
-          <form class="form form_reg popup__form" name="registration" id="registration" novalidate="">
-            <fieldset class="form__fieldset popup__fieldset" name="fieldset">
-              <legend class="form__title popup__title">Регистрация</legend>
-              <label for="login-email" class="form__label popup__label">Email</label>
-              <input
-                type="email"
-                name="regEmail"
-                id="reg-email"
-                class="form__input form__input_type_email popup__input"
-                placeholder="Введите почту"
-                pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                required=""
-              />
-              <p class="error error_type_email" id="regEmail"></p>
-              <label for="reg-password" class="form__label popup__label">Пароль</label>
-              <input
-                type="password"
-                name="regPassword"
-                id="reg-password"
-                class="form__input form__input_type_password popup__input"
-                placeholder="Введите пароль"
-                minlength="8"
-                required=""
-              />
-              <p class="error error_type_password" id="regPassword"></p>
-              <label for="reg-name" class="form__label popup__label">Имя</label>
-              <input
-                type="password"
-                name="regName"
-                id="reg-name"
-                class="form__input form__input_type_password popup__input"
-                placeholder="Введите своё имя"
-                minlength="2"
-                maxlength="30"
-                required=""
-              />
-              <p class="error error_type_name" id="regName"></p>
-              <p class="error error_type_reg error_align_center" id="error-reg"></p>
-              <button type="submit" class="button form__button popup__button" disabled="">
-                Зарегистрироваться
-              </button>
-              <p class="form__sub-text popup__sub-text">
-                или
-                <button type="button" class="form__sub-link popup__sub-link popup__sub-link_login">Войти</button>
-              </p>
-            </fieldset>
-          </form>
-        </div>
-      </section>
-
-      <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
-      <section class="popup popup_type_success">
-        <div class="popup__content popup__success">
-          <img src="./images/close.svg" alt="" class="popup__close close close__edit" />
-          <div class="success">
-            <h2 class="success__title popup__title">
-              Пользователь успешно зарегистрирован!
-            </h2>
-            <button class="success__link popup__sub-link">Войти</button>
-          </div>
-        </div>
+        <button type="button" class="articles__show-more articles__show-more_disabled">Показать еще</button>
       </section>
     </main>
 
-    <footer class="footer wrapper">
+    <footer class="footer footer_articles wrapper">
       <p class="footer__copyright">
         &copy;
         <time datetime="2020">2020</time> Supersite, Powered by News
@@ -334,7 +217,7 @@
         <nav class="footer__nav">
           <ul class="footer__list">
             <li class="footer__item">
-              <a href="./" class="link footer__link" title="Обратно на главную страницу с поиском">Главная</a>
+              <a href="../" class="link footer__link" title="Обратно на главную страницу с поиском">Главная</a>
             </li>
             <li class="footer__item">
               <a
@@ -358,7 +241,7 @@
                 title="Github автора этого сайта"
               >
                 <img
-                  src="./images/github.svg"
+                  src=".././images/github.svg"
                   alt="Github"
                   class="footer__social-icon"
                   width="21"
@@ -374,15 +257,15 @@
                 title="Facebook"
               >
                 <picture>
-                  <source media="(max-width: 767px)" srcset="./images/facebook-square.svg" />
-                  <source media="(max-width: 1254px)" srcset="./images/facebook-circle.svg" />
-                  <source media="(max-width: 1440px)" srcset="./images/facebook-square.svg" />
+                  <source media="(max-width: 767px)" srcset=".././images/facebook-square.svg" />
+                  <source media="(max-width: 1279px)" srcset=".././images/facebook-circle.svg" />
+                  <source media="(max-width: 1440px)" srcset=".././images/facebook-square.svg" />
                   <img
-                    src="./images/facebook-square.svg"
+                    src=".././images/facebook-square.svg"
                     alt="Facebook"
                     class="footer__social-icon"
-                    width="21"
-                    height="21"
+                    width="20"
+                    height="20"
                   />
                 </picture>
               </a>
@@ -392,6 +275,6 @@
       </div>
     </footer>
 
-    <script src="main/main.497d20aed49ad49fd538.js"></script>
+    <script src="css/articles.885335eaded26e733af9.js"></script>
   </body>
 </html>
