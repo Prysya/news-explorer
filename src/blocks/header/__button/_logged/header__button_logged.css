@@ -1,0 +1,23 @@
+.header__button_logged {
+  padding: 12px 21px;
+}
+
+.header__button_logged:after {
+  position: relative;
+  top: 2px;
+  left: 1px;
+  transition: left .2s linear;
+  height: 18px;
+  width: 16px;
+}
+
+.header__button_logged:hover:after, .header__button_logged:focus:after {
+  left: 3px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 894px) {
+  .header__button_logged {
+    padding: 10px 15px;
+  }
+}

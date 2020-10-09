@@ -1,0 +1,21 @@
+.article-card__description-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 304px;
+  background-color: #fff;
+  padding: 22px 24px 24px;
+}
+
+@media screen and (max-width: 1254px) {
+  .article-card__description-container {
+    padding: 17px 16px 16px;
+    height: 269px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .article-card__description-container {
+    height: 244px;
+  }
+}

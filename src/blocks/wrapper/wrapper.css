@@ -1,0 +1,17 @@
+.wrapper {
+  width: calc(100% - 84px);
+  max-width: 1232px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    width: calc(100% - 80px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    width: calc(100% - 32px);
+  }
+}

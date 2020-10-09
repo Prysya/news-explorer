@@ -1,0 +1,26 @@
+.article-card__title {
+  font-family: "Roboto Slab", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+  margin: 0 0 16px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1254px) {
+  .article-card__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 9px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .article-card__title {
+    margin-bottom: 12px;
+  }
+}

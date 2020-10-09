@@ -1,0 +1,12 @@
+.author__container {
+  max-width: 600px;
+  box-sizing: border-box;
+  padding: 52px 0;
+}
+
+@media screen and (max-width: 1254px) {
+  .author__container {
+    padding: 0;
+    align-self: start;
+  }
+}

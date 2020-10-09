@@ -1,0 +1,22 @@
+@import url('_light/_closed/header__dropdown-btn_light_closed.css');
+@import url('_light/_opened/header__dropdown-btn_light_opened.css');
+@import url('_dark/_closed/header__dropdown-btn_dark_closed.css');
+@import url('_dark/_opened/header__dropdown-btn_dark_opened.css');
+
+.header__dropdown-btn {
+  display: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  outline: none;
+  z-index: 20;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 580px) {
+  .header__dropdown-btn {
+    display: block;
+  }
+}

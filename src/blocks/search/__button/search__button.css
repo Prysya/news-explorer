@@ -1,0 +1,21 @@
+.search__button {
+  padding: 20px 52px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 894px) {
+  .search__button {
+    padding: 14px 47px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search__button {
+    position: inherit;
+    padding: 16px 44px;
+  }
+}

@@ -1,0 +1,27 @@
+.header__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  align-items: baseline;
+}
+
+@media screen and (max-width: 580px) {
+  .header__list {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: -300px;
+    right: 0;
+    width: 100%;
+    margin: -56px 0 0;
+    box-sizing: border-box;
+    padding: 91px 16px 31px;
+    text-align: left;
+    transition-duration: .2s;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: 11;
+  }
+}

@@ -1,0 +1,21 @@
+.header__link {
+  margin-right: 34px;
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 24px;
+}
+
+@media screen and (max-width: 894px){
+  .header__link {
+    font-size: 16px;
+    margin-right: 17px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 580px){
+  .header__link {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

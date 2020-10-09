@@ -1,0 +1,22 @@
+.article-card__container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 24px;
+}
+
+@media screen and (max-width: 1254px) {
+  .article-card__container {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .article-card__container {
+    padding: 16px;
+  }
+}

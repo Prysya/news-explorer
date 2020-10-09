@@ -1,0 +1,4 @@
+.page_fixed {
+  overflow: hidden;
+  position: fixed;
+}

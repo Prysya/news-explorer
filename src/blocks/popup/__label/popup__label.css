@@ -1,0 +1,10 @@
+.popup__label {
+  font-family: "Inter", "Times New Roman", sans-serif;
+  font-size: 12px;
+  color: #2F71E5;
+  margin-bottom: 3px;
+}
+
+.popup__label:first-of-type {
+  margin-top: 0;
+}

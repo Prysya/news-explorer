@@ -1,0 +1,21 @@
+.author__image {
+  border-radius: 100%;
+  margin: 0 56px 0 0;
+}
+
+@media screen and (max-width: 1254px) {
+  .author__image {
+    margin: 17px 31px 0 0;
+  }
+}
+@media screen and (max-width: 670px) {
+  .author__image {
+    margin: 32px auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .author__image {
+    margin: 0 auto 24px;
+  }
+}

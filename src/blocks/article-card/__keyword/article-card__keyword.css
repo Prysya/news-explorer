@@ -1,0 +1,14 @@
+.article-card__keyword {
+  box-sizing: border-box;
+  padding: 12px 13px;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 110px;
+  margin: 0 auto 0 0;
+  align-self: center;
+}

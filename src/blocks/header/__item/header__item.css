@@ -1,0 +1,11 @@
+@import url('./_disabled/header__item_disabled.css');
+
+@media screen and (max-width: 580px) {
+  .header__item:nth-child(1) {
+    margin-bottom: 35px;
+  }
+
+  .header__item:nth-child(2) {
+    margin-bottom: 41px;
+  }
+}

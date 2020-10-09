@@ -1,0 +1,12 @@
+.search__container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 500px) {
+  .search__container {
+    flex-direction: column;
+  }
+}

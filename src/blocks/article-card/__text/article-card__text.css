@@ -1,0 +1,17 @@
+.article-card__text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1a1b22;
+  margin: 0 0 auto 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 1254px) {
+  .article-card__text {
+    -webkit-line-clamp: 4;
+  }
+}

@@ -1,0 +1,18 @@
+.header__logo {
+  align-self: center;
+  font-family: "Roboto Slab", "Arial", sans-serif;
+  font-weight: 400;
+  letter-spacing: .4px;
+  font-size: 20px;
+  margin: 0 auto 0 0;
+  text-decoration: none;
+  color: #FFF;
+  transition: color .2s linear;
+  z-index: 12;
+}
+
+@media screen and (max-width: 500px) {
+  .header__logo {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,34 @@
+.articles__show-more {
+  border-radius: 80px;
+  box-sizing: border-box;
+  padding: 22px 84px;
+  border: none;
+  margin: 64px auto 0;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  background-color: #FFF;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.articles__show-more:hover {
+  opacity: .7;
+  box-shadow: 0 5px 5px rgba(6, 17, 43, 0.1);
+}
+
+
+
+@media screen and (max-width: 894px) {
+  .articles__show-more {
+    padding: 18px 52px;
+    margin: 32px auto 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .articles__show-more {
+    margin-top: 19px;
+    width: calc(100% - 32px);
+  }
+}

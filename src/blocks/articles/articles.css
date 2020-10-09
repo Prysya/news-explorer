@@ -1,0 +1,33 @@
+@import url('./__container/articles__container.css');
+@import url('./__container/_gap/_small/articles__container_gap_small.css');
+@import url('./__title/articles__title.css');
+@import url('./__show-more/aticles__show-more.css');
+@import url('./__show-more/_disabled/articles__show-more_disabled.css');
+@import url('./_disabled/articles_disabled.css');
+@import url('./_main/articles_main.css');
+@import url('./_saved/articles_saved.css');
+
+.articles {
+  background-color: #F5F6F7;
+  box-sizing: border-box;
+  padding: 80px 0;
+}
+
+@media screen and (max-width: 1254px) {
+  .articles {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 894px) {
+  .articles {
+    padding: 43px 0 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .articles {
+    padding: 33px 0;
+  }
+}
+

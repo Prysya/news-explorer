@@ -1,0 +1,22 @@
+.search__label {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 545px;
+  margin-bottom: 64px;
+}
+
+@media screen and (max-width: 894px){
+  .search__label {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 445px;
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .search__label {
+    margin-bottom: 122px;
+  }
+}

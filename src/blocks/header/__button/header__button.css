@@ -1,0 +1,22 @@
+@import url('./_color/_dark/header__button_color_dark.css');
+@import url('./_color/_light/header__button_color_light.css');
+@import url('./_logged/header__button_logged.css');
+@import url('./_logged/_light/header__button_logged_light.css');
+@import url('./_logged/_dark/header__button_logged_dark.css');
+
+.header__button {
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (max-width: 580px){
+  .header__button {
+    width: 100%;
+    font-size: 18px;
+  }
+}

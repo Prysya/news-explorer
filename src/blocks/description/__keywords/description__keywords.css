@@ -1,0 +1,19 @@
+.description__keywords {
+  font-size: 18px;
+  color: #1a1b22;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media screen and (max-width: 894px) {
+  .description__keywords {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .description__keywords {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,10 @@
+.article-card__source {
+  font-family: "Roboto Slab", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+  margin: 0 auto 0 0;
+}

@@ -1,0 +1,23 @@
+.description__count {
+  font-family: "Roboto Slab", "Times New Roman", sans-serif;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+  max-width: 520px;
+  margin: 0 0 31px;
+}
+
+@media screen and (max-width: 894px) {
+  .description__count {
+    font-size: 30px;
+    line-height: 34px;
+    max-width: 404px;
+    margin-bottom: 19px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .description__count {
+    margin-bottom: 15px;
+  }
+}

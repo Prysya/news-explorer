@@ -1,0 +1,5 @@
+@media screen and (max-width: 580px) {
+  .header__list_dark {
+    background-color: #1A1B22;
+  }
+}

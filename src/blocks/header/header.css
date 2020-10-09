@@ -1,0 +1,49 @@
+@import url('./__list/header__list.css');
+@import url('./__list/_opened/header__list_opened.css');
+@import url('./__list/_dark/header__list_dark.css');
+@import url('./__list/_light/header__list_light.css');
+@import url('./__item/header__item.css');
+@import url('./__link/header__link.css');
+@import url('./__link/_color/_dark/header__link_color_dark.css');
+@import url('./__link/_color/_light/header__link_color_light.css');
+@import url('./__link/_active-dark/header__link_active-dark.css');
+@import url('./__link/_active-light/header__link_active-light.css');
+@import url('./__button/header__button.css');
+@import url('./__logo/header__logo.css');
+@import url('./__logo/_dark/header__logo_dark.css');
+@import url('./__logo/_light/header__logo_light.css');
+@import url('./__container/header__container.css');
+@import url('./__dropdown-btn/header__dropdown-btn.css');
+@import url('./__dropdown-container/header__dropdown-container.css');
+
+.header {
+  padding: 20px 0 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 20;
+}
+
+@media screen and (max-width: 894px) {
+  .header {
+    padding: 13px 0 10px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .header {
+    border-bottom: none;
+    padding: 16px 0 15px;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid hsla(0,0%,100%,.2);
+    z-index: 15;
+  }
+}
