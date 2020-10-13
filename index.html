@@ -8,7 +8,7 @@
     <meta name="description" content="News Explorer - поисковик новостей" />
     <link rel="icon" type="image/png" href="./images/favicon.png" />
     <title>News Explorer | Главная</title>
-    <link rel="stylesheet" href="main/main.7b79b43ade3a9912402e.css" />
+    <link rel="stylesheet" href="main/main.066807a475799f4a6667.css" />
   </head>
 
   <body class="page">
@@ -23,10 +23,14 @@
           <div class="header__dropdown-container popup"></div>
           <ul class="header__list header__list_dark">
             <li class="header__item header__item_main">
-              <a href="./" class="link header__link header__link_color_light header__link_active-light" tabindex="1">Главная</a>
+              <a href="./" class="link header__link header__link_color_light header__link_active-light" tabindex="1"
+                >Главная</a
+              >
             </li>
-            <li class="header__item header__item_articles">
-              <a href="./articles.html" class="link header__link header__link_color_light" tabindex="2">Сохраненные статьи</a>
+            <li class="header__item header__item_articles header__item_disabled">
+              <a href="./saved-articles" class="link header__link header__link_color_light" tabindex="2"
+                >Сохраненные статьи</a
+              >
             </li>
             <li class="header__item header__item_auth">
               <button type="button" class="header__button header__button_color_light header__button_auth">
@@ -78,14 +82,14 @@
 
       <!--      Для открытия блока preloader необходимо удалить класс preloader_disabled-->
       <!--      для скрытия добавить класс preloader_disabled-->
-      <section class="preloader">
+      <section class="preloader preloader_disabled">
         <i class="preloader__circle"></i>
         <h2 class="preloader__title">Идет поиск новостей...</h2>
       </section>
 
       <!--      Для открытия блока preloader необходимо удалить класс not-found_disabled-->
       <!--      для скрытия добавить класс not-found_disabled-->
-      <section class="not-found">
+      <section class="not-found not-found_disabled">
         <img
           src="./images/not-found.svg"
           alt="Изображение с недовольной лупой"
@@ -99,7 +103,7 @@
 
       <!--      Для открытия блока preloader необходимо удалить класс request-error_disabled-->
       <!--      для скрытия добавить класс request-error_disabled-->
-      <section class="request-error">
+      <section class="request-error request-error_disabled">
         <img
           src="./images/request-error.svg"
           alt="Изображение с грустным монитором"
@@ -113,7 +117,7 @@
 
       <!--      Для открытия блока articles необходимо удалить класс articles_disabled-->
       <!--      для скрытия добавить класс articles_disabled-->
-      <section class="articles articles_main">
+      <section class="articles articles_main articles_disabled">
         <h2 class="articles__title wrapper">Результаты поиска</h2>
         <div class="articles__container wrapper">
           <div class="article-card" id="1">
@@ -213,7 +217,11 @@
       <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
       <section class="popup popup_type_login">
         <div class="popup__content">
-          <img src="./images/close.svg" alt="" class="popup__close close close__edit" />
+          <img
+            src="./images/close.svg"
+            alt="Кнопка в виде крестика для закрытия модального окна "
+            class="popup__close popup__close_login close"
+          />
           <form class="form form_login popup__form" name="login" id="login" novalidate="">
             <fieldset class="form__fieldset popup__fieldset" name="fieldset">
               <legend class="form__title popup__title">Вход</legend>
@@ -258,7 +266,11 @@
       <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
       <section class="popup popup_type_reg">
         <div class="popup__content">
-          <img src="./images/close.svg" alt="" class="popup__close close close__edit" />
+          <img
+            src="./images/close.svg"
+            alt="Кнопка в виде крестика для закрытия модального окна "
+            class="popup__close popup__close_reg close"
+          />
           <form class="form form_reg popup__form" name="registration" id="registration" novalidate="">
             <fieldset class="form__fieldset popup__fieldset" name="fieldset">
               <legend class="form__title popup__title">Регистрация</legend>
@@ -286,7 +298,7 @@
               <p class="error error_type_password" id="regPassword"></p>
               <label for="reg-name" class="form__label popup__label">Имя</label>
               <input
-                type="password"
+                type="text"
                 name="regName"
                 id="reg-name"
                 class="form__input form__input_type_password popup__input"
@@ -312,7 +324,11 @@
       <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
       <section class="popup popup_type_success">
         <div class="popup__content popup__success">
-          <img src="./images/close.svg" alt="" class="popup__close close close__edit" />
+          <img
+            src="./images/close.svg"
+            alt="Кнопка в виде крестика для закрытия модального окна "
+            class="popup__close popup__close_success close"
+          />
           <div class="success">
             <h2 class="success__title popup__title">
               Пользователь успешно зарегистрирован!
@@ -392,6 +408,6 @@
       </div>
     </footer>
 
-    <script src="main/main.497d20aed49ad49fd538.js"></script>
+    <script src="main/main.8ee383859547525e0500.js"></script>
   </body>
 </html>
