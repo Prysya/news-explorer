@@ -8,7 +8,7 @@
     <meta name="description" content="News Explorer - поисковик новостей" />
     <link rel="icon" type="image/png" href="./images/favicon.png" />
     <title>News Explorer | Главная</title>
-    <link rel="stylesheet" href="main/main.066807a475799f4a6667.css" />
+    <link rel="stylesheet" href="main/main.4e66b925589ed3ed02c1.css" />
   </head>
 
   <body class="page">
@@ -17,8 +17,6 @@
         <a href="./" class="link header__logo header__logo_light">NewsExplorer</a>
 
         <button class="header__dropdown-btn header__dropdown-btn_light_closed"></button>
-        <!--        Для скрытия кнопок к тегу li необходимо добавить класс header__item_disabled-->
-        <!--        для открытия, удалить класс header__item_disabled-->
         <nav class="header__nav">
           <div class="header__dropdown-container popup"></div>
           <ul class="header__list header__list_dark">
@@ -62,37 +60,34 @@
 
             <div class="search__container">
               <input
-                type="text"
-                name="search"
+                autocomplete="off"
                 class="form__input search__input"
                 id="search-input"
-                minlength="2"
                 maxlength="30"
+                minlength="2"
+                name="searchInput"
                 placeholder="Введите тему новости"
                 required
+                type="text"
               />
-              <button class="button form__button search__button" type="submit" disabled>
+              <button class="button form__button search__button" type="submit" disabled="">
                 Искать
               </button>
             </div>
-            <p class="error error_search" id="search-error"></p>
+            <p class="error error_search error_align_center" id="searchInput"></p>
           </fieldset>
         </form>
       </section>
 
-      <!--      Для открытия блока preloader необходимо удалить класс preloader_disabled-->
-      <!--      для скрытия добавить класс preloader_disabled-->
       <section class="preloader preloader_disabled">
         <i class="preloader__circle"></i>
         <h2 class="preloader__title">Идет поиск новостей...</h2>
       </section>
 
-      <!--      Для открытия блока preloader необходимо удалить класс not-found_disabled-->
-      <!--      для скрытия добавить класс not-found_disabled-->
       <section class="not-found not-found_disabled">
         <img
           src="./images/not-found.svg"
-          alt="Изображение с недовольной лупой"
+          alt="Изображение с грустной лупой"
           class="not-found__image"
         />
         <h2 class="not-found__title">Ничего не найдено</h2>
@@ -101,8 +96,6 @@
         </p>
       </section>
 
-      <!--      Для открытия блока preloader необходимо удалить класс request-error_disabled-->
-      <!--      для скрытия добавить класс request-error_disabled-->
       <section class="request-error request-error_disabled">
         <img
           src="./images/request-error.svg"
@@ -115,78 +108,11 @@
         </p>
       </section>
 
-      <!--      Для открытия блока articles необходимо удалить класс articles_disabled-->
-      <!--      для скрытия добавить класс articles_disabled-->
       <section class="articles articles_main articles_disabled">
         <h2 class="articles__title wrapper">Результаты поиска</h2>
         <div class="articles__container wrapper">
-          <div class="article-card" id="1">
-            <div class="article-card__container">
-              <p class="article-card__keyword article-card__keyword_disabled">Природа</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Войдите, чтобы сохранять статьи
-              </p>
-              <button type="button" class="article-card__button article-card__button_bookmark"></button>
-            </div>
-            <a href="./" class="article-card__link" target="_blank">
-              <img src="./images/image_04.jpg" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">2 августа, 2019</time>
-                <h3 class="article-card__title">Национальное достояние &#8211; парки</h3>
-                <p class="article-card__text">
-                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
-                  национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                </p>
-                <p class="article-card__source">лента.ру</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="article-card" id="2">
-            <div class="article-card__container">
-              <p class="article-card__keyword article-card__keyword_disabled">Природа</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Войдите, чтобы сохранять статьи
-              </p>
-              <button type="button" class="article-card__button article-card__button_bookmark"></button>
-            </div>
-            <a href="./" class="article-card__link" target="_blank">
-              <img src="./images/image_04.jpg" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">2 августа, 2019</time>
-                <h3 class="article-card__title">Национальное достояние - парки</h3>
-                <p class="article-card__text">
-                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
-                  национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                </p>
-                <p class="article-card__source">лента.ру</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="article-card" id="3">
-            <div class="article-card__container">
-              <p class="article-card__keyword article-card__keyword_disabled">Природа</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Войдите, чтобы сохранять статьи
-              </p>
-              <button type="button" class="article-card__button article-card__button_bookmark"></button>
-            </div>
-            <a href="./" class="article-card__link" target="_blank">
-              <img src="./images/image_07.jpg" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
-                <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
-                <p class="article-card__text">
-                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
-                  ускользающую красоту одного из местных чудес природы.
-                </p>
-                <p class="article-card__source">медуза</p>
-              </div>
-            </a>
-          </div>
         </div>
-        <button type="button" class="articles__show-more">Показать еще</button>
+        <button type="button" class="articles__show-more articles__show-more_disabled">Показать еще</button>
       </section>
 
       <section class="author wrapper">
@@ -214,7 +140,6 @@
         </div>
       </section>
 
-      <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
       <section class="popup popup_type_login">
         <div class="popup__content">
           <img
@@ -263,7 +188,6 @@
         </div>
       </section>
 
-      <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
       <section class="popup popup_type_reg">
         <div class="popup__content">
           <img
@@ -321,7 +245,6 @@
         </div>
       </section>
 
-      <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
       <section class="popup popup_type_success">
         <div class="popup__content popup__success">
           <img
@@ -408,6 +331,6 @@
       </div>
     </footer>
 
-    <script src="main/main.8ee383859547525e0500.js"></script>
+    <script src="main/main.6fb31aecb8bd9465bb70.js"></script>
   </body>
 </html>

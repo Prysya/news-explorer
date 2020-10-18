@@ -8,7 +8,7 @@
     <meta name="description" content="News Explorer - поисковик новостей" />
     <link rel="icon" type="image/png" href=".././images/favicon.png" />
     <title>News Explorer | Статьи</title>
-    <link rel="stylesheet" href="../articles/articles.2e09e4c5e9cf4b8ade48.css" />
+    <link rel="stylesheet" href="../articles/articles.1dc0099f74e380b6417b.css" />
   </head>
 
   <body class="page">
@@ -17,8 +17,6 @@
         <a href="../" class="link header__logo header__logo_dark">NewsExplorer</a>
 
         <button class="header__dropdown-btn header__dropdown-btn_dark_closed"></button>
-        <!--        Для скрытия кнопок к тегу li необходимо добавить класс header__item_disabled-->
-        <!--        для открытия, удалить класс header__item_disabled-->
         <nav class="header__nav">
           <div class="header__dropdown-container popup"></div>
           <ul class="header__list header__list_light">
@@ -47,21 +45,17 @@
     </header>
 
     <main class="main">
-      <section class="description">
+      <section class="description description_disabled">
         <div class="description__container wrapper">
           <h1 class="description__title">Сохраненные статьи</h1>
-          <p class="description__count">Грета, у вас 5 сохранённых статей</p>
-          <p class="description__keywords">
-            По ключевым словам: <span class="description__keywords-bold">Природа</span>,
-            <span class="description__keywords-bold">Тайга</span> и
-            <span class="description__keywords-bold">2-м другим</span>
-          </p>
+          <p class="description__count"></p>
+          <p class="description__keywords"></p>
         </div>
       </section>
 
-      <section class="preloader preloader_disabled">
+      <section class="preloader">
         <i class="preloader__circle"></i>
-        <h2 class="preloader__title">Идет поиск новостей</h2>
+        <h2 class="preloader__title">Идет поиск сохраненных статей...</h2>
       </section>
 
       <section class="not-found not-found_disabled">
@@ -88,118 +82,8 @@
         </p>
       </section>
 
-      <section class="articles articles_saved">
-        <div class="articles__container articles__container_gap_small wrapper">
-          <div class="article-card" id="1">
-            <div class="article-card__container">
-              <p class="article-card__keyword">Природа</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Войдите, чтобы сохранять статьи
-              </p>
-              <button type="button" class="article-card__button article-card__button_trash"></button>
-            </div>
-            <a href="https://yandex.ru" class="article-card__link" target="_blank">
-              <img src=".././images/image_04.jpg" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">2 августа, 2019</time>
-                <h3 class="article-card__title">Национальное достояние &#8211; парки</h3>
-                <p class="article-card__text">
-                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
-                  национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                </p>
-                <p class="article-card__source">лента.ру</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="article-card" id="2">
-            <div class="article-card__container">
-              <p class="article-card__keyword">Природа</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Убрать из сохранённых
-              </p>
-              <button type="button" class="article-card__button article-card__button_trash"></button>
-            </div>
-            <a href="https://yandex.ru" class="article-card__link" target="_blank">
-              <img src=".././images/image_04.jpg" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">2 августа, 2019</time>
-                <h3 class="article-card__title">Национальное достояние - парки</h3>
-                <p class="article-card__text">
-                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
-                  национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                </p>
-                <p class="article-card__source">лента.ру</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="article-card" id="3">
-            <div class="article-card__container">
-              <p class="article-card__keyword">Тайга</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Убрать из сохранённых
-              </p>
-              <button type="button" class="article-card__button article-card__button_trash"></button>
-            </div>
-            <a href="https://yandex.ru" class="article-card__link" target="_blank">
-              <img src=".././images/image_07.jpg" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
-                <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
-                <p class="article-card__text">
-                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
-                  ускользающую красоту одного из местных чудес природы.
-                </p>
-                <p class="article-card__source">медуза</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="article-card" id="4">
-            <div class="article-card__container">
-              <p class="article-card__keyword">Тайга</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Убрать из сохраненных
-              </p>
-              <button type="button" class="article-card__button article-card__button_trash"></button>
-            </div>
-            <a href="https://yandex.ru" class="article-card__link" target="_blank">
-              <img src=".././images/image_07.jpg" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
-                <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
-                <p class="article-card__text">
-                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
-                  ускользающую красоту одного из местных чудес природы.
-                </p>
-                <p class="article-card__source">медуза</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="article-card" id="5">
-            <div class="article-card__container">
-              <p class="article-card__keyword">Тайга</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Убрать из сохраненных
-              </p>
-              <button type="button" class="article-card__button article-card__button_trash"></button>
-            </div>
-            <a href="https://yandex.ru" class="article-card__link" target="_blank">
-              <img src=".././images/image_07.jpg" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
-                <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
-                <p class="article-card__text">
-                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
-                  ускользающую красоту одного из местных чудес природы.
-                </p>
-                <p class="article-card__source">медуза</p>
-              </div>
-            </a>
-          </div>
-        </div>
+      <section class="articles articles_saved articles_disabled">
+        <div class="articles__container articles__container_gap_small wrapper"></div>
         <button type="button" class="articles__show-more articles__show-more_disabled">Показать еще</button>
       </section>
     </main>
@@ -273,6 +157,6 @@
       </div>
     </footer>
 
-    <script src="../articles/articles.885335eaded26e733af9.js"></script>
+    <script src="../articles/articles.58fccf3e6dc8d2e5a833.js"></script>
   </body>
 </html>
