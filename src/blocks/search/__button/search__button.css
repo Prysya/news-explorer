@@ -7,6 +7,12 @@
   cursor: pointer;
 }
 
+.search__button:disabled {
+  background-color: #E6E8EB;
+  color: rgba(0, 0, 0, .2);
+  box-shadow: none;
+}
+
 @media screen and (max-width: 894px) {
   .search__button {
     padding: 14px 47px;
