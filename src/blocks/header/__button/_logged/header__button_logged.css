@@ -4,15 +4,15 @@
 
 .header__button_logged:after {
   position: relative;
-  top: 2px;
-  left: 1px;
+  top: 1px;
+  left: 4px;
   transition: left .2s linear;
   height: 18px;
   width: 16px;
 }
 
 .header__button_logged:hover:after, .header__button_logged:focus:after {
-  left: 3px;
+  left: 6px;
   opacity: 1;
 }
 

@@ -8,7 +8,7 @@
   text-decoration: none;
   color: #FFF;
   transition: color .2s linear;
-  z-index: 12;
+  z-index: 23;
 }
 
 @media screen and (max-width: 500px) {

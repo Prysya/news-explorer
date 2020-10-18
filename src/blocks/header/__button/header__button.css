@@ -12,10 +12,13 @@
   font-weight: 500;
   cursor: pointer;
   outline: none;
+  overflow: hidden;
+  max-width: 150px;
 }
 
 @media screen and (max-width: 580px){
   .header__button {
+    max-width: 100%;
     width: 100%;
     font-size: 18px;
   }
