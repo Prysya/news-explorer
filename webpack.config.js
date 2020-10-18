@@ -7,7 +7,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  entry: { main: './src/pages/main/index.js', articles: './src/pages/articles/index.js' },
+  entry: { main: './src/index.js', articles: './src/saved-articles/index.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name]/[name].[chunkhash].js',
@@ -70,9 +70,6 @@ module.exports = {
               gifsicle: {
                 interlaced: false,
               },
-              webp: {
-                quality: 75,
-              },
             },
           },
         ],
@@ -97,13 +94,13 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      template: './src/pages/main/index.html',
+      template: './src/index.html',
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      template: './src/pages/articles/index.html',
-      filename: 'articles/index.html',
+      template: './src/saved-articles/index.html',
+      filename: 'saved-articles/index.html',
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
