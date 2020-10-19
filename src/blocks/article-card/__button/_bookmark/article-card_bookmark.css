@@ -6,6 +6,3 @@
   background-image: url("../../../../images/bookmark_hover.svg");
 }
 
-.article-card__button_bookmark:focus {
-  background-image: url("../../../../images/bookmark_focus.svg");
-}
