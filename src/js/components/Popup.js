@@ -15,8 +15,8 @@ export default class Popup extends BaseComponents {
     document.querySelector('.page').classList.remove('page_fixed');
   }
 
-  _closeEsc(event, callback) {
-    if (event.key === 'Escape') {
+  _closeByEscOrClick(event, callback) {
+    if (event.key === 'Escape' || event.target.classList.contains('popup')) {
       this._close();
 
       callback();
