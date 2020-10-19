@@ -40,7 +40,6 @@ export default class NewsCardList extends BaseComponents {
     this.elements.cardContainer.innerHTML = '';
 
     if (this._handlers) {
-      console.log('check');
       this._unbind();
       super._removeHandlers(this._handlers);
     }
