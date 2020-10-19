@@ -1,5 +1,5 @@
 const NEWS_API_OPTIONS = {
-  url: `https://newsapi.org/v2/`,
+  url: `https://nomoreparties.co/news/v2/`,
   endpoint: `everything`,
   pageSize: '100',
   sortBy: `popularity`,
