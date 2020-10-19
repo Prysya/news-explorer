@@ -11,6 +11,7 @@ export default class Header extends BaseComponents {
     super._setHandlers([
       { element: this.elements.dropdownBtn, event: 'click', handler: this._toggleDropdownMenuStatus.bind(this) },
       { element: this.elements.dropdownLinks, event: 'mousedown', handler: this._toggleDropdownMenuStatus.bind(this) },
+      { element: this.elements.dropdownLinks, event: 'touchend', handler: this._toggleDropdownMenuStatus.bind(this) },
       { element: this.elements.buttonLogged, event: 'click', handler: this._logout.bind(this) },
     ]);
 
