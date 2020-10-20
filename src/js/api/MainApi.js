@@ -43,9 +43,7 @@ export default class MainApi extends Api {
 
       const json = await res.json();
 
-      if (navigator.userAgent.includes('Safari')) {
-        localStorage.setItem('token', json.token);
-      }
+      localStorage.setItem('token', json.token);
 
       return this._checkResult(res, json);
     } catch (err) {
@@ -55,10 +53,6 @@ export default class MainApi extends Api {
   }
 
   async getUserData() {
-    if (navigator.userAgent.includes('Safari')) {
-      return this._getData(this.roots.userData, { authorization: `Bearer ${localStorage.getItem('token')}` });
-    }
-
     return this._getData(this.roots.userData);
   }
 
@@ -102,9 +96,7 @@ export default class MainApi extends Api {
 
       const json = await res.json();
 
-      if (navigator.userAgent.includes('Safari')) {
-        delete localStorage.token;
-      }
+      delete localStorage.token;
 
       return this._checkResult(res, json);
     } catch (err) {
@@ -118,6 +110,7 @@ export default class MainApi extends Api {
       const res = await fetch(`${this.url}${this.roots.articles}/${articleId}`, {
         method: 'DELETE',
         credentials: 'include',
+        headers: this.headers,
       });
 
       const json = await res.json();
@@ -129,12 +122,12 @@ export default class MainApi extends Api {
     }
   }
 
-  async _getData(address, headers = {}) {
+  async _getData(address) {
     try {
       const res = await fetch(`${this.url}${address}`, {
         method: 'GET',
         credentials: 'include',
-        headers,
+        headers: this.headers,
       });
 
       const json = await res.json();
