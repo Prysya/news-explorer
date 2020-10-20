@@ -87,9 +87,6 @@ export default class MainApi extends Api {
   }
 
   async logout() {
-    delete localStorage.token;
-    delete sessionStorage.username;
-
     try {
       const res = await fetch(`${this.url}${this.roots.logout}`, {
         method: 'POST',

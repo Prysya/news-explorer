@@ -106,6 +106,7 @@ export default class Header extends BaseComponents {
           this._setUnloggedHeaderMenu();
 
           storage.removeStorageItem('username');
+          delete localStorage.token;
 
           if (this.container.classList.contains(headerArticles)) {
             document.location.href = '../';
