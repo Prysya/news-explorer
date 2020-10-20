@@ -1,6 +1,6 @@
 {
   "name": "news-explorer",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Фронтенд проекта news explorer",
   "main": "src/index.js",
   "scripts": {
