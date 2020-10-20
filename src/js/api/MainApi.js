@@ -43,7 +43,7 @@ export default class MainApi extends Api {
 
       const json = await res.json();
 
-      localStorage.setItem('token', json.token);
+      await localStorage.setItem('token', json.token);
 
       return this._checkResult(res, json);
     } catch (err) {
@@ -61,7 +61,7 @@ export default class MainApi extends Api {
       const res = await fetch(`${this.url}${this.roots.articles}`, {
         method: 'POST',
         credentials: 'include',
-        headers: this.headers,
+        headers: { 'Content-Type': 'application/json', authorization: `Bearer ${localStorage.getItem('token')}` },
         body: JSON.stringify({
           keyword,
           title,
@@ -87,16 +87,17 @@ export default class MainApi extends Api {
   }
 
   async logout() {
+    delete localStorage.token;
+    delete sessionStorage.username;
+
     try {
       const res = await fetch(`${this.url}${this.roots.logout}`, {
         method: 'POST',
         credentials: 'include',
-        headers: this.headers,
+        headers: { authorization: `Bearer ${localStorage.getItem('token')}` },
       });
 
       const json = await res.json();
-
-      delete localStorage.token;
 
       return this._checkResult(res, json);
     } catch (err) {
@@ -110,7 +111,7 @@ export default class MainApi extends Api {
       const res = await fetch(`${this.url}${this.roots.articles}/${articleId}`, {
         method: 'DELETE',
         credentials: 'include',
-        headers: this.headers,
+        headers: { authorization: `Bearer ${localStorage.getItem('token')}` },
       });
 
       const json = await res.json();
@@ -127,7 +128,7 @@ export default class MainApi extends Api {
       const res = await fetch(`${this.url}${address}`, {
         method: 'GET',
         credentials: 'include',
-        headers: this.headers,
+        headers: { authorization: `Bearer ${localStorage.getItem('token')}` },
       });
 
       const json = await res.json();
