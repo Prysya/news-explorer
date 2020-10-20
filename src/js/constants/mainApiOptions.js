@@ -1,6 +1,5 @@
 const MAIN_API_OPTIONS = {
-  // url: 'https://api.prysya-news-explorer.tk',
-  url: 'http://localhost:3000',
+  url: 'https://api.prysya-news-explorer.tk',
   headers: {
     'Content-Type': 'application/json',
     authorization: `Bearer ${localStorage.getItem('token')}`,
