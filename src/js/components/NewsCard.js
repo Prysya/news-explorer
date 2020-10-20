@@ -103,7 +103,6 @@ export default class NewsCard extends BaseComponents {
             super._removeHandlers(this._handlers);
             this._unbind();
             this.card.remove();
-            window.location.reload()
           } else if (markedButton) {
             this.card.querySelector(cardButton).classList.add(buttonTypeBookmark);
             this.card.querySelector(cardButton).classList.remove(buttonTypeBookmarkMarked);
