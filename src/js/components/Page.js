@@ -66,8 +66,8 @@ export default class Page {
 
       const articlesRes = await mainApi.getArticles();
 
-      if (res.status === '200') {
-        if (res.totalResults === 0) {
+      if (articlesRes.status === '200') {
+        if (articlesRes.totalResults === 0) {
           return notFound.open();
         }
         storage.saveValueToStorage('articles', articlesRes.data);
