@@ -79,9 +79,7 @@ export default class PopupTypeLogin extends Popup {
       if (res.status === '200') {
         const userData = await mainApi.getUserData();
 
-        const userName = userData.data.name;
-
-        if (userName) {
+        if (userData.status === '200') {
           storage.saveValueToStorage('username', userData.data.name);
           header.setLoggedStatusToHeader(storage.getStorageItem('username'));
 
