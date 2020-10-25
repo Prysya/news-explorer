@@ -2,6 +2,7 @@
 @import url('./__keywords/description__keywords.css');
 @import url('./__keywords-bold/description__keywords-bold.css');
 @import url('./__title/description__title.css');
+@import url('./_disabled/description_disabled.css');
 
 .description {
   box-sizing: border-box;

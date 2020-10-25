@@ -22,6 +22,6 @@
     transition-duration: .2s;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-    z-index: 11;
+    z-index: 21;
   }
 }

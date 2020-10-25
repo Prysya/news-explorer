@@ -10,6 +10,7 @@
   background-color: #FFF;
   font-weight: 500;
   font-size: 18px;
+  transition: transform .2ms linear;
 }
 
 .articles__show-more:hover {
@@ -17,7 +18,9 @@
   box-shadow: 0 5px 5px rgba(6, 17, 43, 0.1);
 }
 
-
+.articles__show-more:active {
+  transform: translate(3px, 3px);
+}
 
 @media screen and (max-width: 894px) {
   .articles__show-more {

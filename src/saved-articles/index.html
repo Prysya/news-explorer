@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Станислав Стаховский" />
+    <meta name="description" content="News Explorer - поисковик новостей" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<%=require('../images/favicon/apple-touch-icon.png')%>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%=require('../images/favicon/favicon-32x32.png')%>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%=require('../images/favicon/favicon-16x16.png')%>">
+    <link rel="mask-icon" href="<%=require('../images/favicon/safari-pinned-tab.svg')%>" color="#5bbad5">
+    <meta name="msapplication-config" content="<%=require('../images/favicon/browserconfig.xml')%>">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>News Explorer | Статьи</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.articles.css %>" />
+  </head>
+
+  <body class="page">
+    <header class="header header_articles">
+      <div class="header__container wrapper">
+        <a href="../" class="link header__logo header__logo_dark">NewsExplorer</a>
+
+        <button class="header__dropdown-btn header__dropdown-btn_dark_closed"></button>
+        <nav class="header__nav">
+          <div class="header__dropdown-container popup"></div>
+          <ul class="header__list header__list_light">
+            <li class="header__item header__item_main">
+              <a href="../" class="link header__link header__link_color_dark">Главная</a>
+            </li>
+            <li class="header__item header__item_articles">
+              <a href="" class="link header__link header__link_color_dark header__link_active-dark"
+                >Сохраненные статьи</a
+              >
+            </li>
+            <li class="header__item header__item_auth header__item_disabled">
+              <button type="button" class="header__button header__button_color_dark header__button_auth">
+                Авторизоваться
+              </button>
+            </li>
+            <li class="header__item header__item_logged">
+              <button
+                type="button"
+                class="header__button header__button_color_dark header__button_logged header__button_logged_dark"
+              ></button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="description description_disabled">
+        <div class="description__container wrapper">
+          <h1 class="description__title">Сохраненные статьи</h1>
+          <p class="description__count"></p>
+          <p class="description__keywords"></p>
+        </div>
+      </section>
+
+      <section class="preloader">
+        <i class="preloader__circle"></i>
+        <h2 class="preloader__title">Идет поиск сохраненных статей...</h2>
+      </section>
+
+      <section class="not-found not-found_disabled">
+        <img
+          src="../<%=require('../images/not-found.svg')%>"
+          alt="Изображение с недовольной лупой"
+          class="not-found__image"
+        />
+        <h2 class="not-found__title">Ничего не найдено</h2>
+        <p class="not-found__text">
+          К сожалению по вашему запросу ничего не найдено.
+        </p>
+      </section>
+
+      <section class="request-error request-error_disabled">
+        <img
+          src="../<%=require('../images/request-error.svg')%>"
+          alt="Изображение с грустным монитором"
+          class="request-error__image"
+        />
+        <h2 class="request-error__title">Во время запроса произошла ошибка.</h2>
+        <p class="request-error__text">
+          Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.
+        </p>
+      </section>
+
+      <section class="articles articles_saved articles_disabled">
+        <div class="articles__container articles__container_gap_small wrapper"></div>
+        <button type="button" class="articles__show-more articles__show-more_disabled">Показать еще</button>
+      </section>
+    </main>
+
+    <footer class="footer footer_articles wrapper">
+      <p class="footer__copyright">
+        &copy;
+        <time datetime="2020">2020</time> Supersite, Powered by News
+        <abbr class="footer__abbr" title="Application Programming Interface">API</abbr>
+      </p>
+
+      <div class="footer__container">
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="../" class="link footer__link" title="Обратно на главную страницу с поиском">Главная</a>
+            </li>
+            <li class="footer__item">
+              <a
+                href="https://praktikum.yandex.ru/"
+                target="_blank"
+                class="link footer__link"
+                title="Онлайн платформа образования"
+                >Яндекс.Практикум</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__social">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a
+                href="https://github.com/prysya"
+                target="_blank"
+                class="link footer__social-link"
+                title="Github автора этого сайта"
+              >
+                <img
+                  src="../<%=require('../images/github.svg')%>"
+                  alt="Github"
+                  class="footer__social-icon"
+                  width="21"
+                  height="21"
+                />
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a
+                href="https://www.facebook.com/prysya"
+                target="_blank"
+                class="link footer__social-link"
+                title="Facebook"
+              >
+                <picture>
+                  <source media="(max-width: 767px)" srcset="../<%=require('../images/facebook-square.svg')%>" />
+                  <source media="(max-width: 1279px)" srcset="../<%=require('../images/facebook-circle.svg')%>" />
+                  <source media="(max-width: 1440px)" srcset="../<%=require('../images/facebook-square.svg')%>" />
+                  <img
+                    src="../<%=require('../images/facebook-square.svg')%>"
+                    alt="Facebook"
+                    class="footer__social-icon"
+                    width="20"
+                    height="20"
+                  />
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="<%= htmlWebpackPlugin.files.chunks.articles.entry %>"></script>
+  </body>
+</html>

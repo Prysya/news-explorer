@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="author" content="Станислав Стаховский" />
     <meta name="description" content="News Explorer - поисковик новостей" />
-    <link rel="icon" type="image/png" href="<%=require('../../images/favicon/favicon.png')%>" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<%=require('./images/favicon/apple-touch-icon.png')%>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon/favicon-32x32.png')%>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%=require('./images/favicon/favicon-16x16.png')%>">
+    <link rel="mask-icon" href="<%=require('./images/favicon/safari-pinned-tab.svg')%>" color="#5bbad5">
+    <meta name="msapplication-config" content="<%=require('./images/favicon/browserconfig.xml')%>">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <title>News Explorer | Главная</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>" />
   </head>
@@ -17,16 +23,18 @@
         <a href="./" class="link header__logo header__logo_light">NewsExplorer</a>
 
         <button class="header__dropdown-btn header__dropdown-btn_light_closed"></button>
-        <!--        Для скрытия кнопок к тегу li необходимо добавить класс header__item_disabled-->
-        <!--        для открытия, удалить класс header__item_disabled-->
         <nav class="header__nav">
           <div class="header__dropdown-container popup"></div>
           <ul class="header__list header__list_dark">
             <li class="header__item header__item_main">
-              <a href="./" class="link header__link header__link_color_light header__link_active-light" tabindex="1">Главная</a>
+              <a href="./" class="link header__link header__link_color_light header__link_active-light" tabindex="1"
+                >Главная</a
+              >
             </li>
-            <li class="header__item header__item_articles">
-              <a href="./articles" class="link header__link header__link_color_light" tabindex="2">Сохраненные статьи</a>
+            <li class="header__item header__item_articles header__item_disabled">
+              <a href="./saved-articles" class="link header__link header__link_color_light" tabindex="2"
+                >Сохраненные статьи</a
+              >
             </li>
             <li class="header__item header__item_auth">
               <button type="button" class="header__button header__button_color_light header__button_auth">
@@ -58,50 +66,41 @@
 
             <div class="search__container">
               <input
-                type="text"
-                name="search"
+                autocomplete="off"
                 class="form__input search__input"
                 id="search-input"
-                minlength="2"
                 maxlength="30"
+                minlength="2"
+                name="searchInput"
                 placeholder="Введите тему новости"
                 required
+                type="text"
               />
-              <button class="button form__button search__button" type="submit" disabled>
+              <button class="button form__button search__button" type="submit" disabled="">
                 Искать
               </button>
             </div>
-            <p class="error error_search" id="search-error"></p>
+            <p class="error error_search error_align_center" id="searchInput"></p>
           </fieldset>
         </form>
       </section>
 
-      <!--      Для открытия блока preloader необходимо удалить класс preloader_disabled-->
-      <!--      для скрытия добавить класс preloader_disabled-->
-      <section class="preloader">
+      <section class="preloader preloader_disabled">
         <i class="preloader__circle"></i>
         <h2 class="preloader__title">Идет поиск новостей...</h2>
       </section>
 
-      <!--      Для открытия блока preloader необходимо удалить класс not-found_disabled-->
-      <!--      для скрытия добавить класс not-found_disabled-->
-      <section class="not-found">
-        <img
-          src="<%=require('../../images/not-found.svg')%>"
-          alt="Изображение с недовольной лупой"
-          class="not-found__image"
-        />
+      <section class="not-found not-found_disabled">
+        <img src="<%=require('./images/not-found.svg')%>" alt="Изображение с грустной лупой" class="not-found__image" />
         <h2 class="not-found__title">Ничего не найдено</h2>
         <p class="not-found__text">
           К сожалению по вашему запросу ничего не найдено.
         </p>
       </section>
 
-      <!--      Для открытия блока preloader необходимо удалить класс request-error_disabled-->
-      <!--      для скрытия добавить класс request-error_disabled-->
-      <section class="request-error">
+      <section class="request-error request-error_disabled">
         <img
-          src="<%=require('../../images/request-error.svg')%>"
+          src="<%=require('./images/request-error.svg')%>"
           alt="Изображение с грустным монитором"
           class="request-error__image"
         />
@@ -111,87 +110,19 @@
         </p>
       </section>
 
-      <!--      Для открытия блока articles необходимо удалить класс articles_disabled-->
-      <!--      для скрытия добавить класс articles_disabled-->
-      <section class="articles articles_main">
+      <section class="articles articles_main articles_disabled">
         <h2 class="articles__title wrapper">Результаты поиска</h2>
-        <div class="articles__container wrapper">
-          <div class="article-card" id="1">
-            <div class="article-card__container">
-              <p class="article-card__keyword article-card__keyword_disabled">Природа</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Войдите, чтобы сохранять статьи
-              </p>
-              <button type="button" class="article-card__button article-card__button_bookmark"></button>
-            </div>
-            <a href="./" class="article-card__link" target="_blank">
-              <img src="<%=require('../../images/test-images/image_04.jpg')%>" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">2 августа, 2019</time>
-                <h3 class="article-card__title">Национальное достояние &#8211; парки</h3>
-                <p class="article-card__text">
-                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
-                  национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                </p>
-                <p class="article-card__source">лента.ру</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="article-card" id="2">
-            <div class="article-card__container">
-              <p class="article-card__keyword article-card__keyword_disabled">Природа</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Войдите, чтобы сохранять статьи
-              </p>
-              <button type="button" class="article-card__button article-card__button_bookmark"></button>
-            </div>
-            <a href="./" class="article-card__link" target="_blank">
-              <img src="<%=require('../../images/test-images/image_04.jpg')%>" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">2 августа, 2019</time>
-                <h3 class="article-card__title">Национальное достояние - парки</h3>
-                <p class="article-card__text">
-                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
-                  национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                </p>
-                <p class="article-card__source">лента.ру</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="article-card" id="3">
-            <div class="article-card__container">
-              <p class="article-card__keyword article-card__keyword_disabled">Природа</p>
-              <p class="article-card__button-description article-card__button-description_disabled">
-                Войдите, чтобы сохранять статьи
-              </p>
-              <button type="button" class="article-card__button article-card__button_bookmark"></button>
-            </div>
-            <a href="./" class="article-card__link" target="_blank">
-              <img src="<%=require('../../images/test-images/image_07.jpg')%>" alt="" class="article-card__image" />
-              <div class="article-card__description-container">
-                <time class="article-card__date" datetime="2012-12-23">23 декабря, 2020</time>
-                <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
-                <p class="article-card__text">
-                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
-                  ускользающую красоту одного из местных чудес природы.
-                </p>
-                <p class="article-card__source">медуза</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <button type="button" class="articles__show-more">Показать еще</button>
+        <div class="articles__container wrapper"></div>
+        <button type="button" class="articles__show-more articles__show-more_disabled">Показать еще</button>
       </section>
 
       <section class="author wrapper">
         <picture>
-          <source media="(max-width: 670px)" srcset="<%=require('../../images/author-mobile.jpg')%>" />
-          <source media="(max-width: 1254px)" srcset="<%=require('../../images/author-tablet.jpg')%>" />
-          <source media="(max-width: 1440px)" srcset="<%=require('../../images/author.jpg')%>" />
+          <source media="(max-width: 670px)" srcset="<%=require('./images/author-mobile.jpg')%>" />
+          <source media="(max-width: 1254px)" srcset="<%=require('./images/author-tablet.jpg')%>" />
+          <source media="(max-width: 1440px)" srcset="<%=require('./images/author.jpg')%>" />
           <img
-            src="<%=require('../../images/author.jpg')%>"
+            src="<%=require('./images/author.jpg')%>"
             alt="Фотография создателя сайта"
             class="author__image"
             title="Фотография создателя сайта"
@@ -200,20 +131,26 @@
         <div class="author__container">
           <h3 class="author__title">Об авторе</h3>
           <p class="author__text">
-            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими
-            технологиями разработки владеете.
+            Разработка для меня - это и работа, и хобби, поэтому даже в нерабочее время я занимаюсь разработкой и изучаю
+            что-то новое относящееся к моей профессии.
           </p>
           <p class="author__text">
-            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
-            потенциальным заказчикам.
+            Целеустремленный и инициативный, интересуюсь сферой IT и тем что кружится на этой орбите. Поэтому ищу
+            команду с интересными проектами. Стану приятным и дружелюбным дополнением команды. В свою очередь предложу
+            знания и опыт применения HTML, CSS и JavaScript. Соберу проект на Webpack. Включусь в совместную работу
+            через Git. Могу поднять сервер на Node.js, настроить роутинr через Express.js и подключить MongoDB. Знаю и
+            использую Nginx. Немного писал тесты на Jest.
           </p>
         </div>
       </section>
 
-      <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
       <section class="popup popup_type_login">
         <div class="popup__content">
-          <img src="<%=require('../../images/close.svg')%>" alt="" class="popup__close close close__edit" />
+          <img
+            src="<%=require('./images/close.svg')%>"
+            alt="Кнопка в виде крестика для закрытия модального окна "
+            class="popup__close popup__close_login close"
+          />
           <form class="form form_login popup__form" name="login" id="login" novalidate="">
             <fieldset class="form__fieldset popup__fieldset" name="fieldset">
               <legend class="form__title popup__title">Вход</legend>
@@ -240,7 +177,6 @@
               />
               <p class="error error_type_password" id="loginPassword"></p>
               <p class="error error_type_login error_align_center" id="error-login"></p>
-              <!--              Для того чтобы активировать кнопку нужно снять атрибут disabled-->
               <button type="submit" class="button form__button popup__button" disabled="">
                 Войти
               </button>
@@ -255,10 +191,13 @@
         </div>
       </section>
 
-      <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
       <section class="popup popup_type_reg">
         <div class="popup__content">
-          <img src="<%=require('../../images/close.svg')%>" alt="" class="popup__close close close__edit" />
+          <img
+            src="<%=require('./images/close.svg')%>"
+            alt="Кнопка в виде крестика для закрытия модального окна "
+            class="popup__close popup__close_reg close"
+          />
           <form class="form form_reg popup__form" name="registration" id="registration" novalidate="">
             <fieldset class="form__fieldset popup__fieldset" name="fieldset">
               <legend class="form__title popup__title">Регистрация</legend>
@@ -286,7 +225,7 @@
               <p class="error error_type_password" id="regPassword"></p>
               <label for="reg-name" class="form__label popup__label">Имя</label>
               <input
-                type="password"
+                type="text"
                 name="regName"
                 id="reg-name"
                 class="form__input form__input_type_password popup__input"
@@ -309,10 +248,13 @@
         </div>
       </section>
 
-      <!--      Для открытия попапа нужно добавить класс popup_is-opened-->
       <section class="popup popup_type_success">
         <div class="popup__content popup__success">
-          <img src="<%=require('../../images/close.svg')%>" alt="" class="popup__close close close__edit" />
+          <img
+            src="<%=require('./images/close.svg')%>"
+            alt="Кнопка в виде крестика для закрытия модального окна "
+            class="popup__close popup__close_success close"
+          />
           <div class="success">
             <h2 class="success__title popup__title">
               Пользователь успешно зарегистрирован!
@@ -358,7 +300,7 @@
                 title="Github автора этого сайта"
               >
                 <img
-                  src="<%=require('../../images/github.svg')%>"
+                  src="<%=require('./images/github.svg')%>"
                   alt="Github"
                   class="footer__social-icon"
                   width="21"
@@ -374,11 +316,11 @@
                 title="Facebook"
               >
                 <picture>
-                  <source media="(max-width: 767px)" srcset="<%=require('../../images/facebook-square.svg')%>" />
-                  <source media="(max-width: 1254px)" srcset="<%=require('../../images/facebook-circle.svg')%>" />
-                  <source media="(max-width: 1440px)" srcset="<%=require('../../images/facebook-square.svg')%>" />
+                  <source media="(max-width: 767px)" srcset="<%=require('./images/facebook-square.svg')%>" />
+                  <source media="(max-width: 1254px)" srcset="<%=require('./images/facebook-circle.svg')%>" />
+                  <source media="(max-width: 1440px)" srcset="<%=require('./images/facebook-square.svg')%>" />
                   <img
-                    src="<%=require('../../images/facebook-square.svg')%>"
+                    src="<%=require('./images/facebook-square.svg')%>"
                     alt="Facebook"
                     class="footer__social-icon"
                     width="21"
