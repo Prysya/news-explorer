@@ -1,6 +1,6 @@
 import BaseComponents from './BaseComponents';
 
-export default class NewsCardList extends BaseComponents {
+export default class ArticlesList extends BaseComponents {
   constructor(options) {
     super(options);
   }
@@ -48,10 +48,12 @@ export default class NewsCardList extends BaseComponents {
   _renderSearchedArticles() {
     const { createCard } = this._dependencies;
 
+    const {articlesCutCount} = this.props;
+
     let articles;
 
-    if (this._articles.length > 3) {
-      articles = this._articles.splice(0, 3);
+    if (this._articles.length > articlesCutCount) {
+      articles = this._articles.splice(0, articlesCutCount);
     } else {
       articles = this._articles;
     }
@@ -68,9 +70,9 @@ export default class NewsCardList extends BaseComponents {
   }
 
   _checkButtonStatus() {
-    const { showMoreButtonDisabled } = this.props;
+    const { showMoreButtonDisabled, articlesCutCount } = this.props;
 
-    if (this._articles.length > 3) {
+    if (this._articles.length > articlesCutCount) {
       return this.elements.showMoreButton.classList.remove(showMoreButtonDisabled);
     }
 

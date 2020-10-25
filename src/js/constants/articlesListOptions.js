@@ -7,6 +7,7 @@ const ARTICLES_LIST_OPTIONS = {
   props: {
     articlesDisabled: 'articles_disabled',
     showMoreButtonDisabled: 'articles__show-more_disabled',
+    articlesCutCount: 3,
   },
 };
 
