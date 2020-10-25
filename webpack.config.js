@@ -78,6 +78,21 @@ module.exports = {
         test: /\.(eot|ttf|woff|woff2)$/,
         loader: 'file-loader?name=./vendor/[name].[ext]&publicPath=../',
       },
+      {
+        test: /browserconfig\.xml$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/browserconfig.xml',
+              esModule: false,
+            },
+          },
+          {
+            loader: 'web-app-browserconfig-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
