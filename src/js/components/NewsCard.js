@@ -24,19 +24,19 @@ export default class NewsCard extends BaseComponents {
     const { keyword, title, text, date, source, link = '', image, _id = '' } = this._data;
 
     const templateString = `
-          <div class="article-card" data-id="${_id}">
+          <div class="article-card" data-id="">
             <div class="article-card__container">
-              <p class="article-card__keyword article-card__keyword_disabled">${keyword}</p>
+              <p class="article-card__keyword article-card__keyword_disabled"></p>
               <p class="article-card__button-description article-card__button-description_disabled"></p>
               <button type="button" class="article-card__button"></button>
             </div>
-            <a href="${link}" class="article-card__link" target="_blank">
-              <img src="${image}" class="article-card__image" alt=""/>
+            <a href="" class="article-card__link" title="" target="_blank">
+              <img src="" class="article-card__image" alt=""/>
               <div class="article-card__description-container">
-                <time class="article-card__date" datetime="${date}"></time>
-                <h3 class="article-card__title">${title}</h3>
-                <p class="article-card__text">${text}</p>
-                <p class="article-card__source">${source}</p>
+                <time class="article-card__date" datetime=""></time>
+                <h3 class="article-card__title"></h3>
+                <p class="article-card__text"></p>
+                <p class="article-card__source"></p>
               </div>
             </a>
           </div>
@@ -44,6 +44,16 @@ export default class NewsCard extends BaseComponents {
     const element = document.createElement('div');
 
     element.insertAdjacentHTML('beforeend', templateString.trim());
+
+    element.querySelector('.article-card').dataset.id = _id;
+    element.querySelector('.article-card__keyword').textContent = keyword;
+    element.querySelector('.article-card__link').href = link;
+    element.querySelector('.article-card__link').title = title;
+    element.querySelector('.article-card__image').src = image;
+    element.querySelector('.article-card__date').dateTime = date;
+    element.querySelector('.article-card__title').textContent = title;
+    element.querySelector('.article-card__text').textContent = text;
+    element.querySelector('.article-card__source').textContent = source;
 
     return element.firstChild;
   }
